@@ -1,3 +1,16 @@
+{
+    margin: 0px;
+    padding: 0px;   
+}
+
+body{
+    color: grey;
+}
+
+.container{
+    max-width: 1200px; 
+    
+}
 .nav
 {
     list-style: none;
@@ -10,12 +23,6 @@
     justify-content: space-between;
 }
 *
-{
-    color: grey;
-    margin: 0px;
-    padding: 0px;
-    max-width: 1200px;    
-}
 #kk
 {
     color: white;
