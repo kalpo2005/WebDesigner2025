@@ -1,0 +1,25 @@
+.nav
+{
+    list-style: none;
+}
+.navbar
+{
+    padding: 10px;
+    margin: 5px;
+    justify-content: space-between;
+    display: flex;
+}
+*
+{
+    color: grey;
+    margin: 0px;
+    padding: 0px;
+    max-width: 1200px;    
+}
+#kk
+{
+    color: white;
+    background-color: blueviolet;
+    border: 20px;
+}
+
