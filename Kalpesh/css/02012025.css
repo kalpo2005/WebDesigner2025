@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* color:red; */
+}
+
+/* utility class */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* nav logo css  */
+
+.header {
+    margin: 15px;
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 0px 50px;
+    align-items: center;
+    box-shadow: 10px;
+}
+
+.logo{
+    display: inline-block;
+}
+.logo span {
+    color: red;
+    background-color: black;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+
+.logo span br {
+    display: none;
+}
+
+/* nav menubar  */
+
+.menu{
+    display: inline;
+    float: right;
+}
+
+.navbar {
+    list-style: none;
+    gap: 30px;
+    display: inline-block;
+    margin: 30px;
+}
+
+.nav-link{
+    display: inline-block;
+    margin: 0px 20px;
+}
