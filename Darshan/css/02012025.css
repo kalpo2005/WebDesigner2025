@@ -9,7 +9,11 @@ body{
 
 .container{
     max-width: 1200px; 
+<<<<<<< HEAD
+    
+=======
     margin:auto;
+>>>>>>> 26f7f59e7411fa8efb440f85ba00d67facb21362
 }
 .nav
 {
@@ -22,11 +26,14 @@ body{
     margin: 5px;
     justify-content: space-between;
 }
+<<<<<<< HEAD
+=======
 
 .nav-link{
     display: inline-block;
     margin: 0px 10px;
 }
+>>>>>>> 26f7f59e7411fa8efb440f85ba00d67facb21362
 *
 #kk
 {
