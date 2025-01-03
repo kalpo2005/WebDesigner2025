@@ -6,13 +6,8 @@
 {
     display: flex;
     padding: 10px;
-    margin: 5px;
+    margin: auto;
     justify-content: space-between;
-}
-
-.nav-link{
-    display: inline-block;
-    margin: 0px 20px;
 }
 *
 {
@@ -24,9 +19,7 @@
 #kk
 {
     color: white;
-    background-color: blueviolet;
+    background-color: rgb(132, 6, 250);
     border: 20px;
-    padding: 3px  7px;
-    border-radius: 5px;
 }
 
