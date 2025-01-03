@@ -9,7 +9,11 @@ body{
 
 .container{
     max-width: 1200px; 
+<<<<<<< HEAD
     
+=======
+    margin:auto;
+>>>>>>> 26f7f59e7411fa8efb440f85ba00d67facb21362
 }
 .nav
 {
@@ -19,14 +23,24 @@ body{
 {
     display: flex;
     padding: 10px;
-    margin: auto;
+    margin: 5px;
     justify-content: space-between;
 }
+<<<<<<< HEAD
+=======
+
+.nav-link{
+    display: inline-block;
+    margin: 0px 10px;
+}
+>>>>>>> 26f7f59e7411fa8efb440f85ba00d67facb21362
 *
 #kk
 {
     color: white;
-    background-color: rgb(132, 6, 250);
+    background-color: blueviolet;
     border: 20px;
+    padding: 3px  7px;
+    border-radius: 5px;
 }
 
