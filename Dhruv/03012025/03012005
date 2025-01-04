@@ -1,4 +1,19 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>music world</title>
-    <h1>music world</h1>
+    <link rel="stylesheet" href="css/03022025.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="" alt="dhruv">
+        </div>
+        <div class="menu-links">
+            <ul class="menu">
+                <li class="nav-link">Home</li>
+                <li class="nav-link">like list</li>
+                <li class="nav-link">menu</li>
+                <li class="nav-link">search</li>
+            </ul>
+    </div>
+</body>
