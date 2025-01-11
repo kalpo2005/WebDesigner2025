@@ -1,5 +1,9 @@
-div{
-    display: inline-block;
-    margin: 10px 20px 30px;
+.a2{
+    visibility: hidden;
+    margin: 10px 20px;
     background-color: red;
+}
+.a1
+{
+    background-color: green;
 }
