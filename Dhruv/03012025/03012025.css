@@ -1,0 +1,20 @@
+
+.logo{
+    display:inline-block;
+}
+
+
+.menu-links{
+
+    display: inline;
+    float:right;
+}
+.menu{
+    display: inline-block;
+    list-style: none;
+}
+
+.nav-link{
+    display: inline-block;
+    margin:0px 15px;
+}
