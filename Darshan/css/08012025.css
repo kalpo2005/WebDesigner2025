@@ -1,0 +1,29 @@
+div{
+    border: 5px solid black;
+    height: 330px;
+    width: 120px;
+}
+.signal1
+{
+    border: 5px solid;
+    height:100px;
+    width: 100px;
+    background-color:red;
+    border-radius: 50%;
+}
+.signal2
+{
+    height:100px;
+    width: 100px;
+    border: 5px solid;
+    background-color:green;
+    border-radius: 50%;
+}
+.signal3
+{
+    height:100px;
+    width: 100px;
+    border: 5px solid;
+    background-color: yellow;
+    border-radius: 50%;
+}
