@@ -1,10 +1,15 @@
 *
 {
-    margin: 0;
+    margin: 2px;
     padding: 0;
-    max-width: 1200px;
+    max-width: 1700px;
 }
-.navbar ul
+.container
+{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar
 {
     display: inline-block;
 }
@@ -18,19 +23,69 @@
     outline: none;
     background-color: rgba(248, 246, 246,0.5);
 }
-
-/* section */
-.king
+.icons
 {
-    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 5px solid rgb(228, 220, 220);
+    border-radius: 50px;
+    color: black;
+}
+/* section */
+.maindiv
+{
+    display: flex;
     justify-content: space-between;
 }
 .sub1
 {
-    font-size: 40px;
-    align-items: center;
+    display: inline-block;
 }
-.main2
+
+.font1
 {
-    background-color: aqua;
+    font-size: 50px;
+}
+.button1 
+{
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    color:white;
+    border-radius: 30%;
+}
+
+/* subdiv2 */
+.sub2
+{
+    display: inline-block;
+    background-color: rgb(32, 199, 199);
+}
+.divicon 
+{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 30%;
+    padding: 10px;
+    color: black;
+}
+.a2
+{
+    border: 2px solid grey;
+    border-radius: 50%;
+    padding: 5px;
+    color: black;
+}
+.img
+{
+    height: 100px;
+}
+.subbutton
+{
+    text-decoration: none;
+    border: 2px solid black;
+    color: white;
+    border-radius: 20%;
+    padding: 5px;
 }
