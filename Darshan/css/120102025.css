@@ -1,0 +1,36 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+}
+.navbar ul
+{
+    display: inline-block;
+}
+.nav-link
+{
+    display: inline-block;
+    border: 2px solid rgb(248, 246, 246);
+    border-radius: 30%;
+    padding: 5px;
+    color:black;
+    outline: none;
+    background-color: rgba(248, 246, 246,0.5);
+}
+
+/* section */
+.king
+{
+    display: inline-block;
+    justify-content: space-between;
+}
+.sub1
+{
+    font-size: 40px;
+    align-items: center;
+}
+.main2
+{
+    background-color: aqua;
+}

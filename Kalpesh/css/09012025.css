@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.logo {
+    display: inline-block;
+}
+
+
+.menu-links {
+    margin-top:20px;
+    display: inline-block;
+    float: right;
+    /* background-color: green; */
+}
+
+.menu {
+    display: inline-block;
+    /* background-color: green; */
+}
+
+.nav-link {
+    display: inline-block;
+    margin: 0px 10px;
+    /* background-color: red; */
+}
+
+.information{
+    background-color: gray;
+}
+.information h1{
+margin: 20px 0px;
+    text-align: center;
+
+}
+.information p{
+    display: inline-block;
+}
+
+.information img{
+    width:400px;
+}
