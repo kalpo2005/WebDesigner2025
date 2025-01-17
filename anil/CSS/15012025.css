@@ -20,8 +20,9 @@ body {
 /* uliitity classes */
 
 .container-fluid {
-    gap: 0px 20px;
+    gap: 0px 10px;
     display: flex;
+    justify-content: space-between;
 }
 
 /*
@@ -48,17 +49,27 @@ a {
     border: 2px hidden;
     background-color:aqua; 
     justify-content: space-between;
-    text-align: center;
-    border-radius: 50px;
+    text-align: justify;
+    border-radius: 75px;
     padding: 10px;
+    width: auto;
+    height: 25px;
+    display:block;
 }
 .navbar1{
     border: 2px hidden;
     background-color:aqua; 
     justify-content: space-between;
     text-align: center;
-    border-radius: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 50px;
+    width: auto;
     
+}
+.navbar1 image{
+    object-fit: cover;
+
 }
 /*
 .logo a:focus {
@@ -66,7 +77,7 @@ a {
 } */
 
 .nav-menu {
-    gap: 0px 20px;
+    gap: 0px 10px;
     display: flex;
 }
 /*
@@ -155,7 +166,3 @@ a {
     outline: none;
 }
 */
-.logo{
-    height: 50px;
-    width: 50px;
-}
