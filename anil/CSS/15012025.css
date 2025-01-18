@@ -1,50 +1,9 @@
-/* * {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Poppins", serif;
-    font-style: normal;
-}
-
-body {
-    background-color: white;
-}
-
-:root {
-    --main-color: #054924;
-    --secondary-color: #022411;
-    --kalpesh: 100px;
-    --button: #3b90f4;
-    --button-dark: #1e4471;
-}
-
-/* uliitity classes */
-
 .container-fluid {
     gap: 0px 10px;
     display: flex;
     justify-content: space-between;
 }
 
-/*
-.container {
-    max-width: 1200px;
-    margin: 0px auto;
-}
-
-a {
-    text-decoration: none;
-}
-
-.flex {
-    display: flex;
-}
-
-/* navmenu */
-/*
-.nav-bar {
-    box-shadow: 0px 3px 20px #202020;
-}
-*/
 .navbar {
     border: 2px hidden;
     background-color:aqua; 
@@ -71,98 +30,8 @@ a {
     object-fit: cover;
 
 }
-/*
-.logo a:focus {
-    outline: none;
-} */
 
 .nav-menu {
     gap: 0px 10px;
     display: flex;
 }
-/*
-.nav-menu ul {
-    display: flex;
-    list-style-type: none;
-    gap: 0px 15px;
-}
-
-.nav-menu a {
-    color: green;
-    font-weight: 400;
-}
-
-.nav-menu a:hover {
-    color: rgb(2, 46, 22);
-    border-bottom: 2px solid rgb(4, 48, 6);
-    margin-bottom: -2px;
-}
-
-.nav-menu a:focus {
-    outline: none;
-    color: rgb(2, 46, 22);
-    border-bottom: 2px solid rgb(4, 48, 6);
-
-}
-
-/* information section css */
-/*
-.basic-info {
-    margin-top: 20px;
-    background-color: var(--secondary-color);
-}
-
-.basic-info2 {
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.info-taxt {
-    color: white;
-}
-
-.info-taxt h1 {
-    font-size: 32px;
-}
-
-.info-taxt p {
-    color: #c5c5c5;
-   margin: 20px 0px;
-}
-
-.btn-info {
-    color: white;
-    border: none;
-    font-weight: 600;
-    padding: 5px 20px;
-    border-radius: 20px;
-    background-color: var(--button);
-}
-
-.btn-info:hover {
-    background-color: var(--button-dark);
-}
-
-.btn-info:focus {
-    outline: none;
-    background-color: var(--button-dark);
-}
-
-.btn-video {
-    color: var(--button);
-    border: none;
-    font-weight: 600;
-    padding: 5px 20px;
-    border-radius: 20px;
-    background-color: var(--secondary-color);
-}
-
-.btn-video:hover {
-    color: var(--button-dark);
-}
-
-.btn-video:focus {
-    color: var(--button-dark);
-    outline: none;
-}
-*/
