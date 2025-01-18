@@ -36,6 +36,15 @@ a {
     display: flex;
 }
 
+.btn-info {
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: var(--button);
+}
+
 /* navmenu */
 
 .nav-bar {
