@@ -1,0 +1,47 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color:rgb(65, 65, 162);
+}
+div{
+    background-color:black;
+    color: white;
+    border: 5px solid rgb(135, 40, 40);
+}
+.nav-link
+{
+    list-style: none;
+    
+}
+.navbar
+{
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#a1
+{
+    margin-left: 0;
+    color: orange;
+}
+#a2
+{
+    margin-left:0px;
+    background-color: orange;
+}
+#a3
+{
+    margin-right: 0;
+}
+.tt
+{
+    color: white;
+}
+#a4
+{
+    margin-left:0;
+}
