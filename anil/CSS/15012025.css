@@ -1,25 +1,66 @@
-.container-fluid{
+.container-fluid {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
     display: flex;
 }
 
-.container{
+.btn-info {
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: var(--button);
+}
+
+/* kalpesh css  */
+
+.navbar {
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.nav-product {
     margin: 0px;
 }
-.flex{
-    display: flex;
+
+.nav-product ul {
+    gap: 0px 10px;
+    list-style-type: none;
 }
 
-.container ul{
-    list-style: none;
-    gap: 0px 33%;
+.product-link {
+    background-color: #d0d0d0;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.logo ul{
-    list-style: none;
-    gap: 0px 33%;
+.nav-product ul li {
+    color: black;
 }
 
-.navbar{
-    margin-top: 10px;
-    justify-content: space-between;
+.nav-icon ul {
+    gap: 0px 10px;
+    list-style-type: none;
+}
+
+.icon-link {
+    background-color: #d0d0d0;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.nav-icon ul li {
+    color: black;
 }
