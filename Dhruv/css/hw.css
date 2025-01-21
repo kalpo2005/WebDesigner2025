@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+
+header {
+    background-color: none;
+    padding: 0px;
+}
+
+.navbar {
+    list-style-type: none;
+    text-align: left;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 0px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
