@@ -1,0 +1,47 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(62, 62, 227);
+}
+.container div
+{
+    background-color: rgb(62, 62, 227);
+}
+hr
+{
+    margin-top: 0;
+    height: 5px;
+    background-color:  rgb(62, 62, 227);
+}
+.logo
+{
+    height: 100px;
+    width: 100px;
+} 
+.img1
+{
+    height: 250px;
+    width: 250px;
+}
+.main{
+    display: flex;
+}
+.container-fluid {
+    display: flex;
+    justify-content: space-evenly;
+}
+button
+{
+    background-color: orange;
+}
+.main1
+{
+   align-self: center;
+}
+.sub
+{
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
