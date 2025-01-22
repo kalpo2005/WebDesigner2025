@@ -1,0 +1,40 @@
+/* .grandfather{
+    display: flex;;
+} */
+
+
+.main{
+    border: 5px solid black;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    /* flex-direction: column; */
+
+    /* flex-direction: row-reverse; */
+    /* gap:200px; */
+    justify-content: space-evenly;
+    /* align-items: center; */
+
+    flex-wrap: wrap;
+}
+
+.box1{
+    width: 300px;
+    display: inline-block;
+    height: 400px;
+    background-color: green;
+}
+.box2{
+    width: 300px;
+    display: inline-block;
+    height: 400px;
+    background-color: blue;
+}
+.box3{
+    width: 300px;
+    display: inline-block;
+    height: 400px;
+    background-color: red;
+}
