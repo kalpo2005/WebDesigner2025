@@ -1,0 +1,30 @@
+.mainbox {
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    /* position: absolute; */
+    /* z-index: 40; */
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    /* margin-top: 50px; */
+    /* position: absolute; */
+    /* z-index: ; */
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    /* position: absolute; */
+    /* z-index: 45; */
+    position: inherit;
+}
