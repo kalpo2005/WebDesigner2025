@@ -1,46 +1,66 @@
 .container-fluid {
-    gap: 0px 10px;
-    display: flex;
-    justify-content: space-between;
+    max-width: 100%;
 }
+
+.container {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-info {
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: var(--button);
+}
+
+/* kalpesh css  */
 
 .navbar {
-    border: 2px hidden;
-    background-color:rgb(224, 226, 226); 
     justify-content: space-between;
-    text-align: justify;
-    border-radius: 75px;
-    padding: 10px;
-    width: auto;
-    height: 20px;
-    display:block;
-}
-.navbar1{
-    border: 2px hidden;
-    background-color:rgb(224, 226, 226); 
-    justify-content: space-between;
-    text-align: center;
-    border-radius: 50%;
-    overflow: hidden;
-    height: 50px;
-    width: auto;
-    
-}
-.navbar1 image{
-    object-fit: cover;
-
+    margin-top: 10px;
 }
 
-.nav-menu {
+.nav-product {
+    margin: 0px;
+}
+
+.nav-product ul {
     gap: 0px 10px;
-    display: flex;
-    
+    list-style-type: none;
 }
 
-/* section  */
-.font_sized{
-    font-size: 50px;
+.product-link {
+    background-color: #d0d0d0;
+    padding: 5px;
+    border-radius: 10px;
 }
-.wave-line{
-    url('wave-pettern.svg');
+
+.nav-product ul li {
+    color: black;
+}
+
+.nav-icon ul {
+    gap: 0px 10px;
+    list-style-type: none;
+}
+
+.icon-link {
+    background-color: #d0d0d0;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.nav-icon ul li {
+    color: black;
 }
