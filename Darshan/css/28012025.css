@@ -1,0 +1,35 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.nav-link
+{
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+}
+a
+{
+    text-decoration: none;
+    color:black;
+    
+}
+.container-fluied
+{   
+    background-color: rgb(47, 131, 150);
+   
+}
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+}
+.icon
+{
+    border: 0.2px solid black;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
