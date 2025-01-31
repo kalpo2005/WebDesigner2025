@@ -54,3 +54,12 @@ main div{
 .abc{
     text-align: center;
 }
+.containerf{
+    max-width: 1000px;
+    margin: 100px auto;
+    justify-content: space-between;
+    background-color: whi;
+}
+.a {
+    margin-top: 50px;
+}
