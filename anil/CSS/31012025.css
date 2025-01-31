@@ -1,0 +1,56 @@
+.container-fluid {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-block{
+    display: inline-block;
+}
+.navbar {
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.nav-icon ul {
+    gap: 0px 10px;
+    list-style-type: none;
+}
+
+.icon-link {
+    background-color: #a2ecdc;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nav-icon ul li {
+    color: black;
+}
+
+main div{
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.icon-link1{
+    background-color: #31e4bd;
+    padding: 1px 0px;
+    border-radius: 100%;
+}
+.color{
+    background-color: white;
+    padding: 50px 25px;
+}
+.abc{
+    text-align: center;
+}
