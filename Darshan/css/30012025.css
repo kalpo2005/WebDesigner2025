@@ -1,7 +1,14 @@
+*
+{
+    margin: 0;
+        padding: 0;
+}
 .container-fluied
 {
     margin: 0;
     padding: 0;
+    position: sticky;
+    top: 0px;
 }
 .logo
 {
@@ -13,8 +20,10 @@
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(42, 164, 164);
     color: white;
+    height: 100px;
 }
 ul{
     display: flex;
@@ -28,16 +37,20 @@ a{
     list-style-type: none;
     margin-right:10px;
 }
-section
+hr
 {
-    background-color: rgb(42, 164, 164);
+    color:rgb(42, 164, 164) ;
+}
+main
+{
     color: white;
-    padding-top: 30px;
+background-color: rgb(42, 164, 164);
 }
 .main
 {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 .sub1
 {
@@ -53,8 +66,39 @@ button
 i
 {
     margin-right: 10px;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 3px;
 }
 .adubox
 {
     display: flex;
+    justify-content: space-around;
+}
+.upbox
+{
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+.new1
+{
+    border: 2px solid white;
+    padding: 3px;
+    background-color: grey;
+}
+.a1
+{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    padding: 60px;
+}
+.b1
+{
+    align-items: center;
+    font-size: 30px;
 }
