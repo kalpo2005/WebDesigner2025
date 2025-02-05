@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --main-color: #000f36;
+    --white: #ffffff;
+}
+
+/* utility classes  */
+
+.container-fluid {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1250px;
+    padding: 16px;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* navbaar css  */
+.navbar {
+    background-color: var(--main-color);
+    border-radius: 3rem 0rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navmenu ul {
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links {
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: var(--white);
+}
+
+
+/* card css 
+ */
+
+.card-main {
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    margin: -300px auto;
+}
+
+.card {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 3rem;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.back {
+    background-color: #630303;
+    padding: 15px;
+    border-radius: 100%;
+}
+
+.btn {
+    /* background-color: azure; */
+    border: 2px solid red;
+    /* color:var(--main-color); */
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.card p {
+    color: #dfdfdf;
+    font-size: 1rem;
+}
+
+
+.background {
+    background-color: green;
+    height: 700px;
+}
