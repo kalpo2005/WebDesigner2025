@@ -19,8 +19,9 @@ a {
     display: inline-block;
 }
 .navbar {
-    justify-content: space-between;
     margin-top: 10px;
+    position: fixed;
+    justify-content: space-between;
 }
 
 .nav-icon ul {
