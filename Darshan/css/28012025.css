@@ -1,0 +1,40 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.nav-link
+{
+    list-style-type: none;
+}
+a
+{
+    text-decoration: none;
+    color:black;
+    
+}
+.container
+{   
+    background-color: rgb(47, 131, 150);
+    padding:10px;
+    position: sticky;
+    top: 0;
+    left:0;
+    
+}
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.icon
+{
+    background-color: yellow !important;
+    border: 0.2px solid black;
+    padding: 20px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
