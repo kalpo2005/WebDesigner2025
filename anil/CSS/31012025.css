@@ -2,9 +2,13 @@
     max-width: 100%;
 }
 
+*{
+    background-color: #31e4bd;
+}
 .container {
     max-width: 1000px;
     margin: 0px auto;
+    justify-content: space-between;
 }
 
 a {
@@ -20,12 +24,11 @@ a {
 }
 .navbar {
     margin-top: 10px;
-    position: fixed;
-    justify-content: space-between;
+  
 }
 
 .nav-icon ul {
-    gap: 0px 10px;
+    gap: 10px;
     list-style-type: none;
 }
 
