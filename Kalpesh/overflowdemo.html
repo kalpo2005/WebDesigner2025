@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Overflow Property Example</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            /* Add some spacing between containers */
+        }
+
+        .content {
+            /* Content that might overflow */
+            white-space: nowrap;
+            /* Prevent text from wrapping */
+            font-size: 14px;
+        }
+
+        /* Overflow: visible */
+        .visible {
+            overflow: visible;
+            /* Default value */
+        }
+
+        /* Overflow: hidden */
+        .hidden {
+            overflow: hidden;
+        }
+
+        /* Overflow: scroll */
+        .scroll {
+            overflow: scroll;
+        }
+
+        /* Overflow: auto */
+        .auto {
+            overflow: auto;
+        }
+
+        /* Overflow: overlay (often behaves like auto, but scrollbars don't take up space) */
+        .overlay {
+            overflow: overlay;
+        }
+
+        /* Example with overflow-x and overflow-y */
+        .xy {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+
+        /* Styling for a longer text example to illustrate overflow */
+        .long-text {
+            width: 150px;
+            /* Smaller width for better demonstration */
+            height: 80px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            margin-top: 20px;
+        }
+
+        .long-text p {
+            white-space: normal;
+            /* Allow text wrapping */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Overflow Property Examples</h1>
+
+    <h2>Overflow: visible</h2>
+    <div class="container visible">
+        <div class="content">This text will overflow and be visible.</div>
+    </div>
+
+    <h2>Overflow: hidden</h2>
+    <div class="container hidden">
+        <div class="content">This text will be clipped.</div>
+    </div>
+
+    <h2>Overflow: scroll</h2>
+    <div class="container scroll">
+        <div class="content">Scrollbars will always be shown, even if the content doesn't overflow.</div>
+    </div>
+
+    <h2>Overflow: auto</h2>
+    <div class="container auto">
+        <div class="content">Scrollbars will be shown only if the content overflows.</div>
+    </div>
+
+    <h2>Overflow: overlay</h2>
+    <div class="container overlay">
+        <div class="content">Scrollbars will be shown only if the content overflows, and they don't take up space.</div>
+    </div>
+
+    <h2>Overflow-x: hidden; Overflow-y: scroll;</h2>
+    <div class="container xy">
+        <div class="content">This text will be clipped horizontally and scrollable vertically.</div>
+    </div>
+
+    <h2>Example with Long Text (demonstrates wrapping and overflow)</h2>
+    <div class="long-text">
+        <p>This is a long paragraph of text designed to demonstrate how the overflow property works when the text is
+            long enough to wrap and potentially overflow the container's boundaries. It will wrap within the container,
+            but if it becomes too long vertically, a scrollbar will appear.</p>
+    </div>
+
+</body>
+
+</html>
