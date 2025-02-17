@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin: 100px;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    /* overflow: overlay; */
+    overflow: clip;
+    /* overflow-clip-margin: 200px; */
+}
