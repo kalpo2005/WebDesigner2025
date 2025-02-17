@@ -1,0 +1,27 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.container-fluied
+{
+    background-image: url("/Darshan/images/img1.png");
+}
+.card
+{
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+}
+i{
+    color: aqua;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sub
+{
+    text-align: center;
+}
+li{
+    list-style-type: none;
+}
