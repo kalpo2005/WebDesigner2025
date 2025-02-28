@@ -4,49 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/Darshan/css/07012025.css">
+    <title>Modern Homepage</title>
+    <style>
+        body {
+margin: 0;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+box-sizing: border-box;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.navbar {
+background: #333;
+color: #fff;
+padding: 1rem 0;
+}
+
+.navbar .logo {
+font-size: 1.5rem;
+font-weight: bold;
+text-decoration: none;
+color: #fff;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 20px;
+padding: 0;
+}
+
+.nav-links li a {
+color: #fff;
+text-decoration: none;
+}
+
+.hero {
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?technology')
+center/cover;
+color: #fff;
+text-align: center;
+padding: 100px 20px;
+}
+
+.hero h1 {
+font-size: 3rem;
+}
+
+.hero p {
+font-size: 1.25rem;
+}
+
+.btn {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background: #f04e30;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+}
+
+.footer {
+text-align: center;
+padding: 1rem 0;
+background: #222;
+color: #bbb;
+}
+    </style>
 </head>
 
 <body>
-    <div>
-        <ul class="nav-link">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <a href="#" class="tt"><li class="navbar" id="a1">Amazon.in</li></a>
-            <a href="#" class="tt"><li class="navbar">Account</li></a>
-            <a href="#" class="tt"><li class="navbar">My Cart</li></a>
-            <a href="#" class="tt"><li class="navbar">Contact Us</li></a>
-            <a href="#" class="tt"><li class="navbar" id="a3" ><input type="text" placeholder="Search Amazon.in" ></li></a>
-            <a href="#" class="tt"></a><li class="navbar" id="a4"><button id="a2">Search</button></li>
-=======
-=======
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MyWebsite</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
->>>>>>> 1ab9226ba9b5e957177705033c1cef2fa5a031c4
-            <a href="#" class="tt">
-                <li class="navbar" id="a1">Amazon.in</li>
-            </a>
-            <a href="#" class="tt">
-                <li class="navbar">Account</li>
-            </a>
-            <a href="#" class="tt">
-                <li class="navbar">My Cart</li>
-            </a>
-            <a href="#" class="tt">
-                <li class="navbar">Contact Us</li>
-            </a>
-            <a href="#" class="tt">
-                <li class="navbar" id="a3"><input type="text" placeholder="Search Amazon.in"></li>
-            </a>
-            <a href="#" class="tt"></a>
-<<<<<<< HEAD
-            <li class="navbar"><button id="a2">Search</button></li>
->>>>>>> main
-=======
-          <li class="navbar"><button id="a2">Search</button></li>
->>>>>>> 1ab9226ba9b5e957177705033c1cef2fa5a031c4
-        </ul>
-    </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to MyWebsite</h1>
+            <p>Your go-to solution for modern web design.</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
+
+/* CSS (style.css) */
+
