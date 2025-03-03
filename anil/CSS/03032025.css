@@ -1,9 +1,10 @@
 .navbar {
-    background-color: #220740;
-    color: white;
+    background-color: #ddcdf0;
+    color: rgb(7, 7, 7);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 20px;
 }
 .link{
     display: flex;
@@ -14,9 +15,9 @@
 .submenu{
     padding: 0;
     list-style-type: none;
-     margin-top: 1rem; 
-    background-color: rgb(185, 61, 61);
-    color: #220740;
+    margin-top: 1rem; 
+    background-color: rgb(73, 39, 134);
+    color: #f9f6fc;
     display: none;
     position: absolute;
     padding: 0px 2rem;
@@ -25,18 +26,10 @@
 
 .anil:hover .submenu {
     display: block;
+    margin-left: -85px;
 }
 
 .submenu li:hover {
     background-color: #220740;
     color: rgb(101, 26, 223);
-}
-
-.menulinks ul{
-    margin: 200px;
-}
-
-.logo image{
-    height: 10px;
-    width: 10px;
 }
