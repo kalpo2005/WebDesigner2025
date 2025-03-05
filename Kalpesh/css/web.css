@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--black);
+}
+
+:root {
+    --primary: #2f9052;
+    --black: #172025;
+    --white: #eefbf2;
+
+    /* taxt collagraphy */
+
+    --normal: 16px;
+    --smnormal: 14px;
+}
+
+/* utility classes  */
+.container-fluid {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
