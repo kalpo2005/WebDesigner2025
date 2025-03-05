@@ -11,8 +11,8 @@
 
     /* taxt collagraphy */
 
-    --normal: 16px;
-    --smnormal: 14px;
+    --normal: 1rem;
+    --smnormal: 0.8rem;
 }
 
 /* utility classes  */
@@ -23,4 +23,12 @@
 .container {
     max-width: 1300px;
     margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.d-none{
+    display: none;
 }
