@@ -1,0 +1,13 @@
+.container{
+    background-color: rgb(6, 216, 6);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+}
+.navlink{
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
