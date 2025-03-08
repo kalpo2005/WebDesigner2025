@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary: #2f9052;
+    --black: #172025;
+    --white: #eefbf2;
+
+    /* taxt collagraphy */
+    --normal: 1rem;
+    --smnormal: 0.9rem;
+}
+
+/* utility classes  */
+.container-fluid {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header css  */
+
+.nav-header {
+    background-color: #09073f;
+}
+
+.navbaar {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-ul {
+    list-style-type: none;
+    font-size: 0.9rem;
+    gap: 15px;
+    color: white;
+}
+
+.navlinks a {
+    color: white;
+}
+
+.navlinks a:hover {
+    color: #22e42c;
+    border-bottom: 2px solid #22e42c;
+
+    /* transition-property:color ;
+    transition-duration:3s ;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+
+    transition-property:border-bottom ;
+    transition-duration:3s ;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s; */
+
+    transition: all 2s ease-out;
+}
+
+.btn i {
+    font-size: 1rem;
+    background-color: #09073f;
+    color: white;
+    border: none;
+    padding: 0.2rem;
+}
+
+
+/* media query css  */
+
+@media (max-width:768px) {
+    .navlinks {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+    }
+}
+
+/* dropdown css */
+
+.drop-div {
+    position: absolute;
+    display:none;
+}
+
+
+.drop-ul {
+    list-style-type: none;
+    padding: 0px 30px;
+    background-color: #09073f;
+    border-radius: 5px;
+}
+
+.drop-links a:hover {
+    color: #09073f;
+    background-color: white;
+    padding: 0px 30px;
+    display: block;
+}
+
+.dropdown:hover .drop-div {
+    display:block;
+}

@@ -1,42 +1,43 @@
-*
-{
+* {
     margin: 0px;
     padding: 0px;
 }
-.navbar
-{
+
+.navbar {
     background-color: rgb(195, 79, 187);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.menu ul
-{
+
+.menulinks {
     display: flex;
-    list-style-type: none ;
+    list-style-type: none;
 }
-.menu ul li a
-{
+
+.menu ul li a {
     text-decoration: none;
     margin: 5px;
     margin-left: 20px;
-    color:rgb(243, 243, 14);
+    color: rgb(243, 243, 14);
 }
-.menu ul li a:hover
-{
+
+.menu ul li a:hover {
     background-color: rgb(36, 185, 170);
 }
-.menu ul li a:focus
- {
+
+.menu ul li a:focus {
     background-color: rgb(36, 185, 170);
 }
-.submenu li
-{
-     position: absolute;
-     display:none;
+
+.submenu {
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    margin-left: 35px;
 }
-.dks:hover .submenu li
-{
+
+.dks:hover .submenu {
     display: block;
 
 }
