@@ -1,0 +1,50 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+.container
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(57, 113, 126);
+    align-items: center;
+}
+.main-list
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-link 
+{
+    color: rgb(180, 137, 38);
+    margin: 10px;
+}
+.nav-link a
+{
+    color: rgb(180, 137, 38);
+    text-decoration: none;
+}
+.nav-link a:hover
+{
+    border-bottom:2px solid rgb(52, 218, 52);
+}
+.submenu
+{
+    list-style-type: none;
+    border: 2px solid rgb(57, 113, 126);
+}
+.submenu-link
+{
+     display: none; 
+    padding-top: 10px;
+}
+.submenu-link :hover
+{
+    background-color: rgb(52, 218, 52);
+}
+.dks:hover .submenu .submenu-link a
+{
+    display: block;
+}
