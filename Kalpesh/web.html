@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo website</title>
+    <title>Demo web
+    </title>
 
     <link rel="stylesheet" href="css/web.css">
-    <link rel="stylesheet" href="css/webmedia.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,29 +22,26 @@
 <body>
 
     <header class="container-fluid nav-header">
-        <nav class="container flex navbar">
+        <nav class="container flex navbaar">
             <div class="logo">
-                <a href="#">
-                    <img width="200px" src="images/Adarsh logo.png" alt="Adarsh Logo">
-                </a>
+                <img src="images/Adarshlogo.png">
             </div>
-            <div class="nav-menu">
-                <ul class="menu flex">
-                    <li class="navlink"><a href="#">Home</a></li>
-                    <li class="navlink"><a href="#">About Us</a></li>
-                    <li class="navlink dropdown">
-                        <a href="#">Department</a>
-                        <div class="submenu">
-                            <ul class="flex">
-                                <li><a href="#">BCA</a></li>
-                                <li><a href="#">BSC</a></li>
-                                <li><a href="#">MSC(IT)</a></li>
-                                <li><a href="#">B.COM</a></li>
+            <div class="menu">
+                <ul class="menu-ul flex">
+                    <li class="navlinks"><a href="#">Home </a></li>
+                    <li class="navlinks"><a href="#">About Us </a></li>
+                    <li class="navlinks dropdown"><a>Department</a>
+                        <div class="drop-div">
+                            <ul class="drop-ul">
+                                <li class="drop-links"><a>BCA</a></li>
+                                <li class="drop-links"><a>BSC</a></li>
+                                <li class="drop-links"><a>MSC</a></li>
+                                <li class="drop-links"><a>BA</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="navlink"><a href="#">Contact Us</a></li>
-                    <li class="menu-btn"><button class="icon-menu">
+                    <li class="navlinks"><a href="#">Contact Us </a></li>
+                    <li class="navlinks d-none btn"><button class="icon-menu">
                             <i class="fa-solid fa-bars-staggered"></i>
                         </button></li>
                 </ul>
@@ -53,13 +50,30 @@
     </header>
 
 
+    <!-- model section  -->
+    <div class="slider-menu">
+        <div class="div-slider">
+            <button class="btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="slider-ul">
+            <li><a class="slider-links" href="#">Home</a></li>
+            <li><a class="slider-links" href="#">About Us</a></li>
+            <li class="drop-slider"><a class="slider-links " href="#">Department</a>
+                <div class="slider-div">
+                    <ul class="slider-drop d-none">
+                        <li><a class="sliderdrop-links" href="">BCA</a></li>
+                        <li><a class="sliderdrop-links" href="">BSC</a></li>
+                        <li><a class="sliderdrop-links" href="">MSC</a></li>
+                        <li><a class="sliderdrop-links" href="">BA</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="slider-links" href="">Contact Us</a></li>
 
-    <!-- model all are here  -->
-    <div class="slidermenu">
-    
+        </ul>
     </div>
-
-    <script src="js/web.js"></script>
 </body>
 
 </html>
