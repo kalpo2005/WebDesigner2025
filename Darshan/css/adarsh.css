@@ -10,16 +10,18 @@
     justify-content: space-between;
     align-items: center;
 }
-.menu ul
+.menulink
 {
+
     display: flex;
     list-style-type: none ;
+    gap: 20px;
 }
 .menu ul li a
 {
     text-decoration: none;
-    margin: 5px;
-    margin-left: 20px;
+    /* margin: 5px; */
+    /* margin-left: 20px; */
     color:rgb(243, 243, 14);
 }
 .menu ul li a:hover
@@ -30,13 +32,14 @@
  {
     background-color: rgb(36, 185, 170);
 }
-.submenu li
+.submenu 
 {
-     position: absolute;
-     display:none;
+    position: absolute;
+    display:none;
+    list-style-type: none;
+    margin-left: 15px; 
 }
-.dks:hover .submenu li
+.dks:hover .submenu  
 {
     display: block;
-
 }
