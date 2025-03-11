@@ -1,37 +1,50 @@
-*
-{
+* {
     margin: 0px;
     padding: 0px;
 }
-.navbar
-{
+
+.navbar {
     background-color: rgb(195, 79, 187);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+<<<<<<< HEAD
 .menulink
 {
 
     display: flex;
     list-style-type: none ;
     gap: 20px;
+=======
+
+.menulinks {
+    display: flex;
+    list-style-type: none;
+>>>>>>> main
 }
-.menu ul li a
-{
+
+.menu ul li a {
     text-decoration: none;
+<<<<<<< HEAD
     /* margin: 5px; */
     /* margin-left: 20px; */
     color:rgb(243, 243, 14);
+=======
+    margin: 5px;
+    margin-left: 20px;
+    color: rgb(243, 243, 14);
+>>>>>>> main
 }
-.menu ul li a:hover
-{
+
+.menu ul li a:hover {
     background-color: rgb(36, 185, 170);
 }
-.menu ul li a:focus
- {
+
+.menu ul li a:focus {
     background-color: rgb(36, 185, 170);
 }
+<<<<<<< HEAD
 .submenu 
 {
     position: absolute;
@@ -41,5 +54,16 @@
 }
 .dks:hover .submenu  
 {
+=======
+
+.submenu {
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    margin-left: 35px;
+}
+
+.dks:hover .submenu {
+>>>>>>> main
     display: block;
 }

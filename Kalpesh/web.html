@@ -4,35 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo website
-    </title>
+    <title>Demo website</title>
+
     <link rel="stylesheet" href="css/web.css">
+    <link rel="stylesheet" href="css/webmedia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
 
-    <header class="container-fluid">
-        <nav class="container">
-            <div class="logo"></div>
+    <header class="container-fluid nav-header">
+        <nav class="container flex navbar">
+            <div class="logo">
+                <a href="#">
+                    <img width="200px" src="images/Adarsh logo.png" alt="Adarsh Logo">
+                </a>
+            </div>
             <div class="nav-menu">
-                <ul>
-                    <a href="">
-                        <li class="navlink">Home</li>
-                    </a>
-                    <a href="">
-                        <li class="navlink">About Us</li>
-                    </a>
-                    <a href="">
-                        <li class="navlink">Department</li>
-                    </a>
-                    <a href="">
-                        <li class="navlink">Contct Us</li>
-                    </a>
+                <ul class="menu flex">
+                    <li class="navlink"><a href="#">Home</a></li>
+                    <li class="navlink"><a href="#">About Us</a></li>
+                    <li class="navlink dropdown">
+                        <a href="#">Department</a>
+                        <div class="submenu">
+                            <ul class="flex">
+                                <li><a href="#">BCA</a></li>
+                                <li><a href="#">BSC</a></li>
+                                <li><a href="#">MSC(IT)</a></li>
+                                <li><a href="#">B.COM</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="navlink"><a href="#">Contact Us</a></li>
+                    <li class="menu-btn"><button class="icon-menu">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </button></li>
                 </ul>
-                <button></button>
             </div>
         </nav>
     </header>
+
+
+
+    <!-- model all are here  -->
+    <div class="slidermenu">
+    
+    </div>
+
     <script src="js/web.js"></script>
 </body>
 
