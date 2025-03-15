@@ -1,42 +1,15 @@
-// let value aleays changes 
+// this is a slider javaScript
 
-// const value change not change 
-// var
+const btn = document.querySelector(".btn-menu");
+const canvas = document.querySelector(".offcanvas");
+const cancel = document.querySelector(".cancel");
 
-
-// const a=20;
-// console.log(a);
-
-// var b=45;
-// console.log(b);
-// b=400;
-// console.log(b);
+btn.addEventListener("click", showmenu);
 
 
-let check = true;
-let test = true;
-
-const drop = document.querySelector(".offdrop");
-const dropul = document.querySelector(".offSubUl");
-const offcanvas = document.querySelector(".offcanvas");
-const menuBtn = document.querySelector(".btn-menu");
-
-drop.addEventListener("click", subdropdown);
-menuBtn.addEventListener("click", submenu);
-
-function subdropdown() {
-    if (check) {
-        dropul.style.display = "block";
-        check = false;
-    }
-    else {
-        dropul.style.display = "none";
-        check = true;
-
-    }
+function showmenu() {
+    canvas.classList.remove("d-none");
+    canvas.classList.add("canvas-add");
 }
 
-function submenu() {
-
-    offcanvas.style.display = "block";
-}
+console.log(canvas.classname);

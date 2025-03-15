@@ -132,35 +132,36 @@ a {
     background-color: var(--primary);
     color: var(--white);
     top: 0;
-    right: 0;
     width: 60vw;
     height: 100vh;
-    padding:1rem 2rem;
-    display:none;
+    right: -60vw;
+    padding: 1rem 2rem;
+    z-index: 99;
+}
+
+.canvas-add{
+    transition: all 2s ease ;
 }
 
 .cancel {
     justify-content: flex-end;
 }
 
-.offSubUl,.offUl{
-list-style-type: none;
+.offSubUl,
+.offUl {
+    list-style-type: none;
 }
 
-.offSubLinks,.offcanvasLInks{
-    color:var(--white);
+.offSubLinks,
+.offcanvasLInks {
+    color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: self-start;
 }
 
-.linkhoverl:hover{
-    color:var(--primary);
+.linkhoverl:hover {
+    color: var(--primary);
     background-color: var(--white);
-}
-
-.offtransition{
-    top: 0;
-    right: 0;
 }

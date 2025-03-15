@@ -1,0 +1,22 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* color:red; */
+}
+
+
+.white-text {
+    color: white;
+}
+
+.red-text {
+    color: red;
+}
+
+.black-bg {
+    background-color: black;
+}
+
+.green-bg {
+    background-color: green;
+}
