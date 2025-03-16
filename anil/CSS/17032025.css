@@ -22,15 +22,20 @@
     position: absolute;
     padding: 0px 2rem;
 }
-.baraiya:hover .submenu {
+
+.sub-link{
+    color: white;
+}
+
+.menu-link a{
+color: white;
+}
+
+.menu-link a:hover{
+    color: yellow;
+    
+}
+
+.dipartment .submenu:hover{
     display: block;
-}
-
-.submenu li:hover {
-    background-color: white;
-    color: rgb(101, 26, 223);
-}
-
-.menu:hover{
-    border: solid 2px greenyellow;
 }
