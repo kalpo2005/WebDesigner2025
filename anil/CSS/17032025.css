@@ -1,0 +1,36 @@
+.container{
+    background-color: rgb(19, 110, 19);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.navlink{
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+}
+.submenu{
+    padding: 0;
+    list-style-type: none;
+    margin-left: -2rem; 
+    background-color: rgb(19, 110, 19);
+    color: #f9f6fc;
+    display: none;
+    position: absolute;
+    padding: 0px 2rem;
+}
+.baraiya:hover .submenu {
+    display: block;
+}
+
+.submenu li:hover {
+    background-color: white;
+    color: rgb(101, 26, 223);
+}
+
+.menu:hover{
+    border: solid 2px greenyellow;
+}
