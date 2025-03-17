@@ -3,67 +3,53 @@
     padding: 0px;
 }
 
-.navbar {
-    background-color: rgb(195, 79, 187);
+.container {
     display: flex;
     justify-content: space-between;
+    background-color: #0f4abf;
     align-items: center;
 }
-<<<<<<< HEAD
-.menulink
-{
 
-    display: flex;
-    list-style-type: none ;
-    gap: 20px;
-=======
-
-.menulinks {
-    display: flex;
+.main-list {
     list-style-type: none;
->>>>>>> main
+    display: flex;
+    justify-content: space-between;
 }
 
-.menu ul li a {
+.nav-link {
+    color: #ffffff;
+    margin: 10px;
+}
+
+.nav-link a {
+    color: #ffffff;
     text-decoration: none;
-<<<<<<< HEAD
-    /* margin: 5px; */
-    /* margin-left: 20px; */
-    color:rgb(243, 243, 14);
-=======
-    margin: 5px;
-    margin-left: 20px;
-    color: rgb(243, 243, 14);
->>>>>>> main
 }
 
-.menu ul li a:hover {
-    background-color: rgb(36, 185, 170);
+.nav-link a:hover {
+    border-bottom: 2px solid #38e116;
 }
 
-.menu ul li a:focus {
-    background-color: rgb(36, 185, 170);
+.nav-link a:focus {
+    border-bottom: 2px solid #38e116;
 }
-<<<<<<< HEAD
-.submenu 
-{
-    position: absolute;
-    display:none;
-    list-style-type: none;
-    margin-left: 15px; 
-}
-.dks:hover .submenu  
-{
-=======
 
 .submenu {
-    position: absolute;
-    display: none;
     list-style-type: none;
-    margin-left: 35px;
+    margin: -2px;
+    background-color:#0f4abf;
+    position: absolute;
+    mar gin: 2px 0px 0px -50px;
+    padding: 1rem;
+    display: none;
 }
 
+.submenu-link {
+    padding: 10px;
+}
+
+.submenu-link :hover {}
+
 .dks:hover .submenu {
->>>>>>> main
     display: block;
 }
