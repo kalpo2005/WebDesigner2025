@@ -52,30 +52,39 @@ a {
 
 .menu-ul {
     list-style-type: none;
-    font-size: 0.9rem;
     gap: 15px;
-    color: var(--white);
+    padding: 10px 0px;
 }
 
-.navlinks a {
+.nav-links {
+    position: relative;
+    font-size: 0.9rem;
     color: var(--white);
+    padding: 5px 0px;
+    width: 100%;
 }
 
-.navlinks a:hover {
-    color: #22e42c;
-    border-bottom: 2px solid #22e42c;
+.nav-links::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--white);
+    border-radius: 15px;
+    transition: all 2s ease;
+}
 
-    /* transition-property:color ;
-    transition-duration:3s ;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
+.hover-animation::before {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    transition-property:border-bottom ;
-    transition-duration:3s ;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s; */
-
-    transition: all 2s ease-out;
+.menu-ul li {
+    list-style-type: none;
+    gap: 15px;
 }
 
 .btn i {
@@ -102,27 +111,13 @@ a {
 
 .drop-div {
     position: absolute;
-    display: none;
+    background-color: var(--primary);
+    padding: 10px 35px 10px;
+    border-radius: 5px;
 }
-
 
 .drop-ul {
     list-style-type: none;
-    padding: 0px 30px;
-    background-color: var(--primary);
-    border-radius: 5px;
-}
-
-.drop-links a:hover {
-    color: var(--primary);
-    background-color: var(--white);
-    padding: 0px 30px;
-    display: block;
-    border-radius: 5px;
-}
-
-.dropdown:hover .drop-div {
-    display: block;
 }
 
 /* slider menu css  */
@@ -132,15 +127,17 @@ a {
     background-color: var(--primary);
     color: var(--white);
     top: 0;
-    width: 60vw;
+    width: 300px;
     height: 100vh;
-    right: -60vw;
+    right: 0;
     padding: 1rem 2rem;
     z-index: 99;
+    /* transform: translateX(); */
+    overflow: hidden;
 }
 
-.canvas-add{
-    transition: all 2s ease ;
+.canvas-add {
+    transition: all 2s ease;
 }
 
 .cancel {
