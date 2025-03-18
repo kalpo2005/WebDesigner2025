@@ -23,6 +23,9 @@
     padding: 0px 2rem;
 }
 
+.sub-menu .a{
+    display: block;
+}
 .sub-link{
     color: white;
 }
@@ -36,6 +39,3 @@ color: white;
     
 }
 
-.dipartment .submenu:hover{
-    display: block;
-}
