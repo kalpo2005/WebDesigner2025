@@ -1,28 +1,38 @@
-/* utility classess   */
-
-.container-fluid{
-    max-width: 100%;
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+}
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform: rotateY(cal(var(--i)*90deg)) translateZ(150px);
+    transition: transform 1s ease-in-out;
+}
+@keyframes rotate {
+    0%{ transform: rotateY(0deg);}    
+    25%{ transform: rotateY(-90deg);}
+    50%{ transform: rotateY(-180deg);}
+    100%{ transform: rotateY(-270deg);}
 }
 
-
-/*navmenu  */
-
-.navbar{
-
+.slide img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 10px;
 }
 
-.nav-menu{
-
-}
-
-.nav-bar{
-
-}
-
-.nav-menu ul{
-
-}
-
-.nav-menu a:hover{
-
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 110vh;
+    background: #111;
+    margin: 300px;
+    overflow: hidden;
 }
