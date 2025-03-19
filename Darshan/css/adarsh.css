@@ -26,6 +26,7 @@
 }
 .submenu
 {
+    position: absolute;
     list-style-type: none;
     display: none;
 }
