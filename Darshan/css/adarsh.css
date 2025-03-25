@@ -30,8 +30,16 @@
 .submenu
 {
     position: absolute;
+    background-color:rgb(11, 11, 126) ;
     list-style-type: none;
+    padding:10px;
+    gap: 2px;
     display: none;
+}
+.submenu li
+{
+    padding:6px;
+    margin: 0px 10px 0px -15px;
 }
 .submenu-link
 {
