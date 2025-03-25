@@ -20,6 +20,7 @@ body {
 .btn::before {
     content: '';
     position: absolute;
+<<<<<<< HEAD
     /* z-index: -1; */
     top:0;
     bottom: 0;
@@ -27,14 +28,35 @@ body {
     left: 50%;
     opacity: 0;
     transition: 2s ease;
+=======
+    background-color: rebeccapurple;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    opacity: 1;
+
+>>>>>>> 8d42041d50b34e6978d5344e19f0ccfb5158f72a
 }
 
 .btn:hover::before {
     content: '';
+<<<<<<< HEAD
     cursor:progress;
     background-color: rgb(153, 114, 51);
     z-index: 1  ;
     right: 0;
     left: 0;
     opacity: 1;
+=======
+    position: absolute;
+    background-color: rebeccapurple;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 2s ease;
+>>>>>>> 8d42041d50b34e6978d5344e19f0ccfb5158f72a
 }
