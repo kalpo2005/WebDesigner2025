@@ -10,7 +10,7 @@
 {
     display: flex;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1600px;
     background-color: rgb(11, 11, 126);
     align-items:center;
 }
@@ -21,7 +21,7 @@
     justify-content: space-between;
 }
 .nav-link
-{
+{  
     outline: none;
     margin-right: 20px;
     text-decoration: none;
@@ -29,14 +29,17 @@
 }
 .submenu
 {
-    position: absolute;
     list-style-type: none;
+    background-color: rgb(11, 11, 126);
     display: none;
+    margin: 2px 0px 0px -25px;
+    padding: 10px 0px 0px 5px;
 }
 .submenu-link
 {
     color: #ffffff;
     text-decoration: none;
+    padding: 10px;
 }
 .nav-link:hover
 {
@@ -46,7 +49,7 @@
 {
     border-bottom: 2px solid #20a947;
 }
-.dks:hover .submenu
+.dks:hover 
 {
     display: block;
 }
