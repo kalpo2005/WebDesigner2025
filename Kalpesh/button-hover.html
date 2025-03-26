@@ -24,35 +24,38 @@
             display: inline-block;
             transition: 2s ease-in;
         }
-
+        
+        .btn:hover {
+            color: white;
+        }
         .btn::before {
             content: '';
             position: absolute;
             /* background: linear-gradient(90deg, rgba(34, 37, 195, 1) 0%, rgba(235, 57, 206, 1) 100%); */
-            top: 0;
+            /* top: 0;
+            right: 100%;
             bottom: 0;
-            right: 50%;
-            left: 50%;
+            left: 0%; */
+
+            inset:0% 100% 0% 0%;
+            
             z-index: -1;
             transition: 2s ease;
             opacity: 0;
             background-color: #a70f51;
+            transition: 2s ease-in;
         }
 
-        .btn:hover {
-            color: white;
-        }
 
         .btn:hover::before {
             background-color: #a70f51;
             background-color: #a70f51;
             /* background: linear-gradient(0deg, rgba(34, 37, 195, 1) 0%, rgba(235, 57, 206, 1) 100%); */
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
+        
+            right: 0%;
             z-index: -1;
             opacity: 1;
+            /* transition: 2sec ease; */
         }
     </style>
 
