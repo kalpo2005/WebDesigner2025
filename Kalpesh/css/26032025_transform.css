@@ -1,0 +1,18 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.photo {
+    width: 700px;
+    transition: 2s ease;
+}
+
+.photo:hover {
+    transform:
+        translate(300px, 40px) rotateX(60deg);
+
+}
