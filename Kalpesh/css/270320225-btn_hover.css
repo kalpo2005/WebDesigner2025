@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #222222;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn {
+    padding: 2rem 5rem;
+    font-size: 3rem;
+    background-color: #222222;
+    border-radius: 1rem;
+    color: #8d9ded;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    height: 101%;
+    width: 101%;
+    background: linear-gradient(45deg, rgba(34, 37, 195, 1), rgba(235, 57, 206, 1));
+    border-radius: 1.2rem;
+    /* Slightly larger than button for border effect */
+    z-index: -1;
+    transform: rotate(1turn);
+    transition: 2s ease;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #222222;
+    border-radius: 1rem;
+    z-index: -1;
+}
