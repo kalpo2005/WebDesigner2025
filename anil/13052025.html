@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            color: white;
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .baraiya{
+            color: purple;
+            position: relative;
+        }
+
+        .baraiya::after{
+            content: '';
+            position: absolute;
+            background-color: black;
+            border-left: 2px solid white;
+            top: 0;
+            left: 0;
+            /* z-index: -1; */
+            width: 100%;
+            height: 100%;
+            
+            animation: anil 2s stepS(5) 0s alternate infinite;
+        }
+
+        @keyframes anil {
+
+            0%{
+                left: 0;
+            }
+
+            100%{
+                left: 100%;
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="anil">i like <span class="baraiya">apple</span></h1>
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>

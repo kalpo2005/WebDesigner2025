@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        body{
+        body {
             background-color: black;
             display: flex;
             align-items: center;
-            justify-content: center;        }
+            justify-content: center;
 
-        .container{
-            display: flex;
+
+            /* div ne screen ma center ma lavva */
+            height: 100vh;
+            width: 100vw;
+
+        }
+
+        .container {
             align-items: center;
             justify-content: center;
+            display: flex;
+            align-content: center;
             background-color: red;
             height: 200px;
             width: 300px;
@@ -25,38 +33,46 @@
             animation-fill-mode: backwards;
             animation-play-state: paused;
             animation-iteration-count: infinite;
-            animation-delay: 2s; 
+            animation-delay: 2s;
             animation-direction: alternate;
         }
-        .container:hover{
+
+        .container:hover {
             animation-play-state: running;
         }
+
         @keyframes anil {
 
-            0%{
+            0% {
                 border-radius: 10%;
             }
-            25%{
+
+            25% {
                 border-radius: 20%;
             }
-            50%{
+
+            50% {
                 border-radius: 30%;
             }
-            75%{
+
+            75% {
                 border-radius: 40%;
             }
-            100%{
+
+            100% {
                 border-radius: 50%;
             }
 
 
-            
+
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-         <h1>hi</h1>
+        <h1> hi</h1>
     </div>
 </body>
+
 </html>
