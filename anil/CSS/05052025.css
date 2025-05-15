@@ -1,0 +1,103 @@
+body {
+    background-color: aqua;
+    margin: 0;
+}
+
+hr {
+    border: 2px solid black;
+}
+
+.container {
+    height: 600px;
+    width: 1300px;
+    position: relative;
+    display: block;
+}
+
+.box1 {
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    animation: anil 8s linear infinite;
+}
+
+.box2 {
+    top: 150px;
+    left: 150px;
+    right: 150px;
+    bottom: 150px;
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: baraiya 8s linear infinite;
+}
+
+@keyframes anil {
+    0% {
+        border-radius: 0;
+        transform: translate(10px, 10px) rotate(0deg);
+    }
+
+    25% {
+        border-radius: 50%;
+        background-color: yellow;
+        transform: translate(1400px, 10px) rotate(90deg);
+    }
+
+    50% {
+        border-radius: 0;
+        background-color: orangered;
+        transform: translate(1400px, 530px) rotate(180deg);
+    }
+
+    75% {
+        border-radius: 50%;
+        background-color: blue;
+        transform: translate(10px, 530px) rotate(270deg);
+    }
+
+    100% {
+        border-radius: 0%;
+        background-color: blueviolet;
+        transform: translate(10px, 10px) rotate(360deg);
+    }
+}
+
+@keyframes baraiya {
+    0% {
+        border-radius: 0;
+        transform: translate(10px, 10px) rotate(0deg);
+    }
+
+    25% {
+        border-radius: 50%;
+        background-color: yellow;
+        transform: translate(1100px, 10px) rotate(90deg);
+    }
+
+    50% {
+        border-radius: 0;
+        background-color: orangered;
+        transform: translate(1100px, 200px) rotate(180deg);
+    }
+
+    75% {
+        border-radius: 50%;
+        background-color: blue;
+        transform: translate(10px, 200px) rotate(270deg);
+    }
+
+    100% {
+        border-radius: 0%;
+        background-color: blueviolet;
+        transform: translate(10px, 10px) rotate(360deg);
+    }
+}
