@@ -1,0 +1,97 @@
+/* --- page styling --- */
+        body {
+            background-color: aqua;
+            /* margin: 0;  no space between screen and underline */
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        hr.line {
+            border: 0;
+            border-top: 2px solid #333;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .container {
+            height: 60px;
+            justify-content: left;
+            align-items: center;
+            display: flex;
+            gap: 100px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+        }
+
+        .box {
+            height: 30px;
+            width: 30px;
+            background: purple;
+            position: relative;
+            margin-left: 10px;
+
+        }
+
+        /* transform property*/
+
+        .translate:hover {
+            transform: translate(100px);
+            transition: 2s;
+        }
+
+        .translateX:hover {
+            transform: translateX(100px);
+            transition: 2s;
+        }
+
+        .translateY:hover {
+            transform: translateY(100px);
+            transition: 2s;
+        }
+
+        .rotateX:hover {
+            transform: rotateX(360deg);
+            transition: 2s;
+        }
+
+        .rotateY:hover {
+            transform: rotateY(360deg);
+            transition: 2s;
+            animation: paused;
+        }
+
+        .rotate:hover {
+            transform: rotate(360deg);
+            transition: 2s;
+        }
+
+        .scale:hover {
+            transform: scale(2);
+            transition: 2s;
+        }
+
+        .scaleX:hover {
+            transform: scaleX(2);
+            transition: 2s;
+        }
+
+        .scaleY:hover {
+            transform: scaleY(2);
+            transition: 2s;
+        }
+
+        .skew:hover {
+            transform: skew(180deg);
+            transition: 2s;
+        }
+
+        .skewX:hover {
+            transform: skewX(180deg);
+            transition: 2s;
+        }
+
+        .skewY:hover {
+            transform: skewY(180deg);
+            transition: 2s;
+        }
