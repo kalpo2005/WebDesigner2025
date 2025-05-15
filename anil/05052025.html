@@ -3,13 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animation</title>
     <style>
+        body{
+            background-color: aqua;
+            margin: 0;
+        }
+
+       hr{
+            border: 2px solid black;
+
+        }
+
+        .box {
+            background-color: blueviolet;
+            height: 100px;
+            width: 100px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            animation: anil 5s alternate infinite ease-in-out;
+        }
+
+        
+
+        @keyframes anil {
+            0%{
+                border-radius: 0;
+                transform: translate(1200px,0px) rotate(360deg);
+                transition: 2s;
+            }
+            25%{
+                border-radius: 50%;
+                background-color: yellow;
+            }
+            50%{
+                border-radius: 0;
+                background-color: orangered;
+            }
+            75%{
+                border-radius: 50%;
+                background-color: blue;
+            }
+            100%{
+                border-radius: 0%;
+                background-color: green;
+            }
+        }
 
 
     </style>
 </head>
 <body>
-    <h1><b>Animation property</b></h1>
+    <h1 style="color: purple; text-align: center;"><b>Animation</b></h1>
+    <hr>
+    <div class="container">
+        <div class="box">
+hi
+        </div>
+    </div>
 </body>
 </html>
