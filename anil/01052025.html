@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Follow Mouse</title>
+    
+    <!-- external css -->
+    <link rel="stylesheet" href="CSS/01052025.css">
+
+    <!-- internal css -->
+
+    <!-- <style>
+        body {
+            background-color: aqua;
+        }
+
+        .object1{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+            transition: transform 0.05s linear;
+            }
+            
+            .object2{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+            transition: transform 0.05s linear;
+            }
+        </style> -->
+    </head>
+
+<body>
+
+    <div class="object1" id="object1">
+        <h1>hi</h1>
+    </div>
+    
+    <div class="object2" id="object2">
+        <h1>hi</h1>
+    </div>
+    
+    <!-- external javascript -->
+    <script src="js/01052025.js"></script>
+
+    <!-- internal javascript -->
+
+    <!-- <script>
+
+        const object = document.querySelector('.object1');
+        const object2 = document.getElementById('object2');
+
+        /* MOVE MOUSE CURSOR IN THE SCREEN WHEN PURPLE CIRCLE IS MOVED */
+
+        document.addEventListener('mousemove', (e) => {
+            object1.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+
+        /* CLICK WITH DRAG MOUSE CURSOR IN THE SCREEN WHEN GREEN CIRCLE IS MOVED */
+
+        let isDragging = false;
+
+        document.addEventListener('mousedown', () => {
+            isDragging = true;
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                object2.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            }
+        });
+
+    </script> -->
+</body>
+
+</html>
