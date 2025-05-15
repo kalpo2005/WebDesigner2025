@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation-timing-function</title>
+
+    <!-- external css -->
+    <!-- <link rel="stylesheet" href="CSS/15052025.css"> -->
+
+    <!-- internal css -->
+    <style>
+        /* --- page styling --- */
+        body {
+            background-color: aqua;
+            /* margin: 0;  no space between screen and underline */
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        hr.line {
+            border: 0;
+            border-top: 2px solid #333;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        /* --- animation playground --- */
+        .container {
+            height: 100px;
+            justify-content: left;
+            align-items: center;
+            display: flex;
+        }
+
+        .box {
+            height: 30px;
+            width: 30px;
+            background: purple;
+            position: absolute;
+
+            animation: anil 5s alternate infinite;
+        }
+
+        /* animation-timing-function*/
+        .ease {
+            animation-timing-function: ease;
+        }
+
+        .linear {
+            animation-timing-function: linear;
+        }
+
+        .ease-in {
+            animation-timing-function: ease-in;
+        }
+
+        .ease-out {
+            animation-timing-function: ease-out;
+        }
+
+        .ease-in-out {
+            animation-timing-function: ease-in-out;
+        }
+
+        /* --- keyframes --- */
+        @keyframes anil {
+            from {
+                left: 15%;
+            }
+
+            to {
+                left: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <hr class="line">
+    <!-- 1. ease (default) -->
+    <div class="container">
+        <h1>ease (default)</h1>
+        <div class="box ease"></div>
+    </div>
+    <hr class="line">
+
+    <!-- 2. linear -->
+    <div class="container">
+        <h1>linear</h1>
+        <div class="box linear"></div>
+    </div>
+    <hr class="line">
+
+    <!-- 3. ease-in -->
+    <div class="container">
+        <h1>ease-in</h1>
+        <div class="box ease-in"></div>
+    </div>
+    <hr class="line">
+
+    <!-- 4. ease-out -->
+    <div class="container">
+        <h1>ease-out</h1>
+        <div class="box ease-out"></div>
+    </div>
+    <hr class="line">
+
+    <!-- 5. ease-in-out -->
+    <div class="container">
+        <h1>ease-in-out</h1>
+        <div class="box ease-in-out"></div>
+    </div>
+    <hr class="line">
+</body>
+
+</html>

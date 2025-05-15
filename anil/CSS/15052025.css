@@ -1,0 +1,63 @@
+/* --- page styling --- */
+body {
+    background-color: aqua;
+    /* margin: 0;  no space between screen and underline */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+hr.line {
+    border: 0;
+    border-top: 2px solid #333;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* --- animation playground --- */
+.container {
+    height: 100px;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+}
+
+.box {
+    height: 30px;
+    width: 30px;
+    background: purple;
+    position: absolute;
+
+    animation: anil 3s alternate infinite paused;
+}
+
+/* animation-timing-function*/
+.ease {
+    animation-timing-function: ease;
+}
+
+.linear {
+    animation-timing-function: linear;
+}
+
+.ease-in {
+    animation-timing-function: ease-in;
+}
+
+.ease-out {
+    animation-timing-function: ease-out;
+}
+
+.ease-in-out {
+    animation-timing-function: ease-in-out;
+}
+
+/* --- keyframes --- */
+@keyframes anil {
+    from {
+        left: 15%;
+    }
+
+    to {
+        left: 95%;
+    }
+}
