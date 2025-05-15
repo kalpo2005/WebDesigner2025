@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,19 @@
     <style>
         body {
             background-color: aqua;
-            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
         }
 
         hr {
             border: 2px solid black;
+            width: 100%;
+            margin: 10px 0;
         }
 
-        .container{
-            height: 600px;
-            width: 1300px;
+        .container {
             position: relative;
             display: block;
         }
@@ -35,6 +39,7 @@
             position: absolute;
             animation: anil 8s linear infinite;
         }
+
         .box2 {
             top: 150px;
             left: 150px;
@@ -53,64 +58,78 @@
         @keyframes anil {
             0% {
                 border-radius: 0;
-                transform: translate(10px,10px) rotate(0deg);
+                transform: translate(10px, 10px) rotate(0deg);
             }
+
             25% {
                 border-radius: 50%;
                 background-color: yellow;
-                transform: translate(1400px,10px) rotate(90deg);
+                transform: translate(1400px, 10px) rotate(90deg);
             }
+
             50% {
                 border-radius: 0;
                 background-color: orangered;
-                transform: translate(1400px,530px) rotate(180deg);
+                transform: translate(1400px, 500px) rotate(180deg);
             }
+
             75% {
                 border-radius: 50%;
                 background-color: blue;
-                transform: translate(10px,530px) rotate(270deg);
+                transform: translate(10px, 500px) rotate(270deg);
             }
+
             100% {
                 border-radius: 0%;
-                background-color:blueviolet;
-                transform: translate(10px,10px) rotate(360deg);
-            }
-        }
-        @keyframes baraiya {
-            0% {
-                border-radius: 0;
-                transform: translate(10px,10px) rotate(0deg);
-            }
-            25% {
-                border-radius: 50%;
-                background-color: yellow;
-                transform: translate(1100px,10px) rotate(90deg);
-            }
-            50% {
-                border-radius: 0;
-                background-color: orangered;
-                transform: translate(1100px,200px) rotate(180deg);
-            }
-            75% {
-                border-radius: 50%;
-                background-color: blue;
-                transform: translate(10px,200px) rotate(270deg);
-            }
-            100% {
-                border-radius: 0%;
-                background-color:blueviolet;
-                transform: translate(10px,10px) rotate(360deg);
+                background-color: blueviolet;
+                transform: translate(10px, 10px) rotate(360deg);
             }
         }
 
+        @keyframes baraiya {
+            0% {
+                border-radius: 0;
+                transform: translate(10px, 10px) rotate(0deg);
+            }
+
+            25% {
+                border-radius: 50%;
+                background-color: yellow;
+                transform: translate(1100px, 10px) rotate(90deg);
+            }
+
+            50% {
+                border-radius: 0;
+                background-color: orangered;
+                transform: translate(1100px, 200px) rotate(180deg);
+            }
+
+            75% {
+                border-radius: 50%;
+                background-color: blue;
+                transform: translate(10px, 200px) rotate(270deg);
+            }
+
+            100% {
+                border-radius: 0%;
+                background-color: blueviolet;
+                transform: translate(10px, 10px) rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
     <h1 style="color: purple; text-align: center;"><b>Animation</b></h1>
     <hr>
     <div class="container">
-        <div class="box1"><h1>AG</h1></div>
-        <div class="box2"><h1>KK</h1></div>
+        <div class="box1">
+            <h1>AG</h1>
+        </div>
+        <div class="box2">
+            <h1>KK</h1>
+        </div>
     </div>
 </body>
+
 </html>
