@@ -29,19 +29,19 @@
             justify-content: center;
             align-items: center;
             perspective: 800px;
-            animation: rotateAll 20s linear infinite; /* Optional full rotation */
+            animation: baraiya 20s linear infinite; /* Optional full rotation */
         }
 
         .circle {
             position: absolute;
             background: transparent;
             width: calc(var(--i) * 2.5vmin);
-            aspect-ratio: 1;
+            aspect-ratio: 1;       /* means height and width same make square */
             border-radius: 50%;
             border: 3px solid rgb(0, 255, 13);
-            transform-style: preserve-3d;
+            transform-style: preserve-3d;   /* 3d animation mate */
             transform: rotateX(70deg) translateZ(50px);
-            animation: anil 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+            animation: anil 3s ease-in-out calc(var(--i) * 0.08s) infinite;   /* timing set karva mate cal() function */
             box-shadow: 0 0 15px rgb(124, 124, 124),
                         inset 0 0 15px rgb(124, 124, 124);
         }
@@ -53,11 +53,11 @@
             }
             50% {
                 transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
-                filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg); /* means one by one color rotate thay  */
             }
         }
 
-        @keyframes rotateAll {
+        @keyframes baraiya {
             from {
                 transform: rotateZ(0deg);
             }
@@ -68,8 +68,8 @@
 
         .core {
             position: absolute;
-            width: 2vmin;
-            aspect-ratio: 1;
+            width: 2vmin;  /* means aapel width na 2% px */
+            aspect-ratio: 1; /* means height and width same make square */
             background-color: lime;
             border-radius: 50%;
             box-shadow: 0 0 30px lime;
