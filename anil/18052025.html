@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slider{
+        display: flex;
+    }
+    .slide{
+        width: 400vh;
+        height: 300vh;
+    }
+
+</style>
+
+<body>
+    <div class="slide">
+        <div class="slider">
+            <div class="image">
+                <img src="images/square.jpg" alt="image">
+            </div>
+            <div class="image">
+                <img src="images/square.jpg" alt="image">
+            </div>
+            <div class="image">
+                <img src="images/square.jpg" alt="image">
+            </div>
+            <div class="image">
+                <img src="images/square.jpg" alt="image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slide = document.querySelector('.slider');
+        let index = 0;
+        let totalslide = 4;
+
+        index = (index + 1)% totalslide;
+        slide.style.transform = 'translateX(-${index *100}%)';
+    </script>
+</body>
+
+</html>
