@@ -29,31 +29,43 @@
             justify-content: center;
             align-items: center;
             perspective: 800px;
-            animation: baraiya 20s linear infinite; /* Optional full rotation */
+            animation: baraiya 20s linear infinite;
+            /* Optional full rotation */
         }
 
         .circle {
             position: absolute;
+            /* circle nu background transparent or any color */
             background: transparent;
+            /*circle ni ring ni width calculation */
             width: calc(var(--i) * 2.5vmin);
-            aspect-ratio: 1;       /* means height and width same make square */
+            /* circle ketlu long turn le*/
+            aspect-ratio: 0.5;
+            /* means height and width same make square */
             border-radius: 50%;
-            border: 3px solid rgb(0, 255, 13);
-            transform-style: preserve-3d;   /* 3d animation mate */
-            transform: rotateX(70deg) translateZ(50px);
-            animation: anil 3s ease-in-out calc(var(--i) * 0.08s) infinite;   /* timing set karva mate cal() function */
-            box-shadow: 0 0 15px rgb(124, 124, 124),
-                        inset 0 0 15px rgb(124, 124, 124);
+            border: 3px dotted rgb(21, 0, 255);
+
+            transform-style: preserve-3d;
+            /* 3d animation mate */
+            transform: rotateX(360deg) translateZ(50px);
+            animation: anil 3s ease-in-out calc(var(--i) * 0.07s) infinite;
+            /* timing set karva mate cal() function */
+            box-shadow: 0 0 15px rgb(242, 37, 37),
+                inset 0 0 15px rgb(242, 37, 37);
         }
 
         @keyframes anil {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: rotateX(70deg) translateZ(50px) translateY(0);
                 filter: hue-rotate(0deg);
             }
+
             50% {
                 transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
-                filter: hue-rotate(360deg); /* means one by one color rotate thay  */
+                filter: hue-rotate(360deg);
+                /* means one by one color rotate thay  */
             }
         }
 
@@ -61,6 +73,7 @@
             from {
                 transform: rotateZ(0deg);
             }
+
             to {
                 transform: rotateZ(360deg);
             }
@@ -68,8 +81,10 @@
 
         .core {
             position: absolute;
-            width: 2vmin;  /* means aapel width na 2% px */
-            aspect-ratio: 1; /* means height and width same make square */
+            width: 2vmin;
+            /* means aapel width na 2% px */
+            aspect-ratio: 1;
+            /* means height and width same make square */
             background-color: lime;
             border-radius: 50%;
             box-shadow: 0 0 30px lime;
@@ -102,6 +117,17 @@
         <div class="circle" style="--i:18;"></div>
         <div class="circle" style="--i:19;"></div>
         <div class="circle" style="--i:20;"></div>
+        <div class="circle" style="--i:21;"></div>
+        <div class="circle" style="--i:22;"></div>
+        <div class="circle" style="--i:23;"></div>
+        <div class="circle" style="--i:24;"></div>
+        <div class="circle" style="--i:25;"></div>
+        <div class="circle" style="--i:26;"></div>
+        <div class="circle" style="--i:27;"></div>
+        <div class="circle" style="--i:28;"></div>
+        <div class="circle" style="--i:29;"></div>
+        <div class="circle" style="--i:30;"></div>
+
     </div>
 </body>
 
