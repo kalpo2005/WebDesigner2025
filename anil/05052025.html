@@ -1,66 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
+    <!-- external css -->
+    <!-- <link rel="stylesheet" href="CSS/05052025.css"> -->
+
+    <!-- internal css -->
     <style>
-        body{
+        body {
             background-color: aqua;
-            margin: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
         }
 
-       hr{
+        hr {
             border: 2px solid black;
-
+            width: 100%;
+            margin: 10px 0;
         }
 
-        .box {
+        .container {
+            position: relative;
+            display: block;
+        }
+
+        .box1 {
             background-color: blueviolet;
             height: 100px;
             width: 100px;
-            align-items: center;
             display: flex;
+            align-items: center;
             justify-content: center;
-            animation: anil 5s alternate infinite ease-in-out;
+            position: absolute;
+            animation: anil 8s linear infinite;
         }
 
-        
+        .box2 {
+            top: 150px;
+            left: 150px;
+            right: 150px;
+            bottom: 150px;
+            background-color: blueviolet;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: baraiya 8s linear infinite;
+        }
 
         @keyframes anil {
-            0%{
+            0% {
                 border-radius: 0;
-                transform: translate(1200px,0px) rotate(360deg);
-                transition: 2s;
+                transform: translate(10px, 10px) rotate(0deg);
             }
-            25%{
+
+            25% {
                 border-radius: 50%;
                 background-color: yellow;
+                transform: translate(1400px, 10px) rotate(90deg);
             }
-            50%{
+
+            50% {
                 border-radius: 0;
                 background-color: orangered;
+                transform: translate(1400px, 500px) rotate(180deg);
             }
-            75%{
+
+            75% {
                 border-radius: 50%;
                 background-color: blue;
+                transform: translate(10px, 500px) rotate(270deg);
             }
-            100%{
+
+            100% {
                 border-radius: 0%;
-                background-color: green;
+                background-color: blueviolet;
+                transform: translate(10px, 10px) rotate(360deg);
             }
         }
 
+        @keyframes baraiya {
+            0% {
+                border-radius: 0;
+                transform: translate(10px, 10px) rotate(0deg);
+            }
 
+            25% {
+                border-radius: 50%;
+                background-color: yellow;
+                transform: translate(1100px, 10px) rotate(90deg);
+            }
+
+            50% {
+                border-radius: 0;
+                background-color: orangered;
+                transform: translate(1100px, 200px) rotate(180deg);
+            }
+
+            75% {
+                border-radius: 50%;
+                background-color: blue;
+                transform: translate(10px, 200px) rotate(270deg);
+            }
+
+            100% {
+                border-radius: 0%;
+                background-color: blueviolet;
+                transform: translate(10px, 10px) rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
     <h1 style="color: purple; text-align: center;"><b>Animation</b></h1>
     <hr>
     <div class="container">
-        <div class="box">
-hi
+        <div class="box1">
+            <h1>AG</h1>
+        </div>
+        <div class="box2">
+            <h1>KK</h1>
         </div>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marquee Tag Full Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+    h2 {
+      color: black;
+      text-align: center;
+    }
+    marquee {
+      font-size: 20px;
+      font-weight: bold;
+      color: darkblue;
+      border: 3px groove black;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>HTML Marquee Tag - All Properties Demo</h2>
+
+  <!-- 1. direction - moves text to the right -->
+  <marquee direction="right">
+    direction="right" → Text moves to the right
+  </marquee>
+
+  <!-- 2. behavior - alternate (bounces back and forth) -->
+  <marquee behavior="alternate">
+    behavior="alternate" → Bounces back and forth
+  </marquee>
+
+  <!-- 3. scrollamount - speed of scroll (higher = faster) -->
+  <marquee scrollamount="10">
+    scrollamount="10" → Faster scroll speed
+  </marquee>
+
+  <!-- 4. scrolldelay - delay between movements -->
+  <marquee scrollamount="5" scrolldelay="200">
+    scrolldelay="200" → Slower scroll, more delay
+  </marquee>
+
+  <!-- 5. loop - number of repetitions (3 times only) -->
+  <marquee loop="3">
+    loop="3" → This marquee will scroll only 3 times
+  </marquee>
+
+  <!-- 6. bgcolor - background color -->
+  <marquee style="background-color: lightblue;">
+    bgcolor="lightblue" → With background color
+  </marquee>
+
+  <!-- 7. height and width - size of the marquee area -->
+  <marquee height="50" width="400">
+    height="50" & width="400" → Controlled size
+  </marquee>
+
+  <!-- 8. hspace and vspace - adds margin around marquee -->
+  <marquee hspace="30" vspace="20" style="background-color:lightgreen;">
+    hspace="30" & vspace="20" → Space around marquee
+  </marquee>
+
+  <!-- 9. align - aligns vertically (not recommended in modern HTML) -->
+  <marquee text-align="middle">
+    align="middle" → Vertical alignment (deprecated)
+  </marquee>
+
+  <!-- 10. onmouseover/onmouseout - interactive stop/start -->
+  <marquee behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();" style="background-color: purple;">
+    Hover over me! → onmouseover & onmouseout stop/start effect
+  </marquee>
+
+</body>
+</html>
