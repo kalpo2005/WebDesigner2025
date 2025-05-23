@@ -23,7 +23,7 @@
     <header class="container-fluid nav-header">
         <nav class="container flex navbaar">
             <div class="logo">
-                <img src="/MainLogo.png" width="200px" style="margin-top: 5px;position: relative;left: -40px;">
+                <img src="images/MainLogo.png" width="200px" style="margin-top: 5px;position: relative;left: -40px;">
             </div>
             <div class="menu">
                 <ul class="menu-ul flex">
@@ -48,6 +48,21 @@
         </nav>
     </header>
 
+    <div class="container">
+        <div class="slider">
+            <div class="slide"  id="slide">
+                <div class="slide-image">
+                    <img src="images/Slider_1.jpg" alt="slider1">
+                </div>
+                <div class="slide-image">
+                    <img src="images/Slider_1.jpg" alt="slider1">
+                </div>
+                <div class="slide-image">
+                    <img src="images/Slider_1.jpg" alt="slider1">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- all models are here  -->
 
@@ -74,7 +89,17 @@
     </div>
 
     <script src="js/web.js"></script>
-  
+    <script>
+        let currentIndex = 0;
+        const totalSlides = 3; // Total number of images
+        const slide = document.getElementById('slide');
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 2000);
+    </script>
+
 </body>
 
 </html>

@@ -1,207 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Width Slider - Random Users</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    .slider-container {
-      width: 100%;
-      height: 0;
-      padding-top: 56.25%; /* 16:9 ratio */
-      position: relative;
-      overflow: hidden;
-      background-color: #f0f0f0;
-    }
-
-    .slider {
-      display: flex;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      transition: transform 0.5s ease;
-    }
-
-    .slide {
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .slide img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .slide .user-info {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    .slide .user-info h3 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .slide .user-info p {
-      margin: 5px 0 0;
-      font-size: 18px;
-    }
-
-    /* Button Styles */
-    .pagination-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
-
-    .pagination-buttons button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      font-size: 20px;
-      cursor: pointer;
-      border-radius: 50%;
-    }
-
-    .pagination-buttons button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Mobile-friendly Design */
-    @media (max-width: 768px) {
-      .slide .user-info h3 {
-        font-size: 18px;
-      }
-
-      .slide .user-info p {
-        font-size: 14px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent vs innerText</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .whitespace {
+            white-space: pre-line;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="slider-container">
-    <div class="slider" id="slider"></div>
-    <div class="pagination-buttons">
-      <button id="prevBtn" onclick="showPrevSlide()">❮</button>
-      <button id="nextBtn" onclick="showNextSlide()">❯</button>
+    <div id="example1">
+        This is some <span>visible</span> text.
+        <span class="hidden">This is hidden text.</span>
+        <script>console.log('This is a script.');</script>
+        <style>/* This is some CSS */</style>
+        <br>Line break.
     </div>
-  </div>
 
-  <script>
-    let users = [];
-    let currentIndex = 0;
-    let autoScrollInterval;
+    <div id="example2" class="whitespace">
+        Multiple
+        lines
+        with
+        whitespace.
+    </div>
 
-    // Fetch Random User Data from the API
-    async function fetchUsers() {
-      try {
-        const response = await fetch('https://randomuser.me/api/?results=5');
-        const data = await response.json();
-        users = data.results;
-        renderSlider();
-        updateView();
+    <h1>This is a output</h1>
 
-        // Start auto-scrolling every 2 seconds
-        startAutoScroll();
+    <div id="output1"></div>
+    <div id="output2"></div>
 
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-      }
-    }
+    <script>
+        const example1Div = document.getElementById('example1');
+        const example2Div = document.getElementById('example2');
+        const output1Div = document.getElementById('output1');
+        const output2Div = document.getElementById('output2');
 
-    // Render the slider content based on fetched user data
-    function renderSlider() {
-      const slider = document.getElementById('slider');
-      slider.innerHTML = ''; // Clear the slider before adding new slides
+        // Getting text content
+        const textContent1 = example1Div.textContent;
+        const innerText1 = example1Div.innerText;
+        output1Div.innerHTML = `<strong>textContent (Example 1):</strong><pre>${textContent1}</pre><br><strong>innerText (Example 1):</strong><pre>${innerText1}</pre>`;
 
-      users.forEach(user => {
-        const slide = document.createElement('div');
-        slide.className = 'slide';
+        const textContent2 = example2Div.textContent;
+        const innerText2 = example2Div.innerText;
+        output2Div.innerHTML = `<strong>textContent (Example 2):</strong><pre>${textContent2}</pre><br><strong>innerText (Example 2):</strong><pre>${innerText2}</pre>`;
 
-        slide.innerHTML = `
-          <img src="${user.picture.large}" alt="${user.name.first}">
-          <div class="user-info">
-            <h3>${user.name.first} ${user.name.last}</h3>
-            <p>${user.email}</p>
-            <p>${user.location.city}, ${user.location.country}</p>
-          </div>
-        `;
+        // Setting text content
+        const newTextContent = "<p>This is text set by textContent.</p>";
+        const newInnerText = "<p>This is text set by innerText.</p><br>With a line break.";
 
-        slider.appendChild(slide);
-      });
-    }
+        setTimeout(() => {
+            const newDivTextContent = document.createElement('div');
+            newDivTextContent.textContent = newTextContent;
+            document.body.appendChild(newDivTextContent);
 
-    // Update the slider view by adjusting the transform property
-    function updateView() {
-      const slider = document.getElementById('slider');
-      const slideWidth = slider.offsetWidth;
-      slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-
-      // Disable/enable buttons based on index
-      document.getElementById('prevBtn').disabled = currentIndex === 0;
-      document.getElementById('nextBtn').disabled = currentIndex === users.length - 1;
-    }
-
-    // Show next slide
-    function showNextSlide() {
-      if (currentIndex < users.length - 1) {
-        currentIndex++;
-      } else {
-        currentIndex = 0; // Reset to first slide for infinite scroll
-      }
-      updateView();
-    }
-
-    // Show previous slide
-    function showPrevSlide() {
-      if (currentIndex > 0) {
-        currentIndex--;
-      } else {
-        currentIndex = users.length - 1; // Go to last slide for infinite scroll
-      }
-      updateView();
-    }
-
-    // Start auto-scrolling every 2 seconds
-    function startAutoScroll() {
-      autoScrollInterval = setInterval(showNextSlide, 2000); // Change slide every 2 seconds
-    }
-
-    // Stop auto-scrolling
-    function stopAutoScroll() {
-      clearInterval(autoScrollInterval);
-    }
-
-    // Initial fetch
-    fetchUsers();
-  </script>
-
+            const newDivInnerText = document.createElement('div');
+            newDivInnerText.innerText = newInnerText;
+            document.body.appendChild(newDivInnerText);
+        }, 1000);
+    </script>
 </body>
 </html>
