@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    /* .image {
+        background-color: #f9e1ea;
+        color: #6209a8; 
+    } */
+
+    body {
+        background-color: #f9e1ea;
+    }
+
+    .container {
+        background-color: white;
+        padding: 10px 40px;
+        border-radius: 5px;
+        margin: 25px;
+    }
+
+    .nav-menu {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-menu div {
+        padding: 5px;
+    }
+
+    .search {
+        display: flex;
+        border-radius: 5px;
+        width: 60%;
+        background-color: aquamarine;
+        justify-content: space-between;
+    }
+
+    .icon {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+    }
+
+    .like:hover {
+        background-color: #f9e1ea;
+        border-radius: 50%;
+    }
+
+    .list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 25%;
+        padding-right: 25%;
+
+    }
+
+    .list li:hover {
+        color: #6209a8;
+        background-color: #f9e1ea;
+        border-radius: 20%;
+    }
+
+    .sub-list {
+        background-color: #f9e1ea;
+        position: absolute;
+        top: 100%;
+        padding: 0px 30px 0px;
+        margin-left: -125%;
+        border-radius: 5px;
+        display: none;
+        box-shadow: 0px 4px 6px black;
+    }
+
+    .list li {
+        position: relative;
+        /* to allow absolute positioning of .sub-list */
+    }
+
+    /* drop down open thay when hover the sub-list li */
+    .list li:hover .sub-list {
+        display: block;
+    }
+
+    .sub-list li {
+        background-color: transparent;
+        padding: 5px;
+        list-style: none;
+        text-align: left;
+    }
+
+    .sub-list li:hover {
+        background-color: transparent;
+        cursor: grab;
+        border-radius: 4px;
+        border: black 2px solid;
+    }
+
+    .main {
+        display: flex;
+        background-color: #f9e1ea;
+        justify-content: space-between;
+        /* padding-left: 30px; */
+        height: 200px;
+    }
+
+    .main-text {
+        padding-left: 35px;
+    }
+
+    .title {
+        color: #6209a8;
+    }
+
+    .subtitle {
+        color: rgb(196, 161, 115);
+    }
+
+    button {
+        background-color: rgb(157, 122, 76);
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .highlight{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        align-items: center;
+    }
+
+    .pages {
+        text-indent: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+
+    .pages div {
+        display: block;
+    }
+
+    .page-image {
+        height: 200px;
+    }
+
+    .full{
+        color: gold;
+    }
+    .half{
+        color: gold;
+    }
+    .empty{
+        color: gold;
+    }
+    .grey{
+        color: gray;
+    }
+    .head{
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+    .sub-head{
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <nav class="nav-menu">
+            <div class="name"><h2>Booksy</h2></div>
+            <div class="search">
+                <div>Search by auther ,title, name</div>
+                <div class="like"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="icon">
+                <div class="like"><i class="fa-regular fa-heart"></i></div>
+                <div class="like"><i class="fa-solid fa-comment"></i></div>
+                <div class="like">EN</div>
+            </div>
+        </nav>
+
+        <div class="link">
+            <ul class="list">
+                <li class=grey>Home</li>
+                <li class=grey>Bestseller</li>
+                <li class=grey>Category
+                    <div class="sub-list">
+                        <ul>
+                            <li>Entertainment</li>
+                            <li>Economic</li>
+                            <li>historical</li>
+                            <li>spritual</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class=grey>Find a store</li>
+                <li class=grey>Blog</li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="main-text">
+                <h1 class="title">Build your Library</h1>
+                <h4 class="subtitle">But two selected books and get <br> one for free</h4>
+                <button>View all</button>
+
+            </div>
+            <div>
+                <img style="height: 200px; width: 800px;" src="images/reading.png" alt="">
+            </div>
+        </div>
+
+        <div class="highlight">
+            <div>
+              <h3> <b> Popular Now</b></h3>
+            </div>
+            <div>
+              <a href="#">View all</a> 
+            </div>
+
+        </div>
+
+        <div class="pages">
+            <div>
+                <img class="page-image" src="images/reading1.png" alt="image1">
+                <h3 class="head">Creative Hustle</h3>
+                <h4 class="sub-head grey">Ramen Albert</h4>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i>
+            </div>
+            <div>
+                <img class="page-image" src="images/reading5.png" alt="image2">
+                <h3 class="head">Art Unleashed</h3>
+                <h4 class="sub-head grey">Stefano</h4>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star-half-stroke half"></i>
+            </div>
+            <div>
+                <img class="page-image" src="images/reading2.png" alt="image3">
+                <h3 class="head">The Study Of Brain</h3>
+                <h4 class="sub-head grey">Alan W Watts</h4>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star empty"></i>
+            </div>
+            <div>
+                <img class="page-image" src="images/reading6.png" alt="image4">
+                <h3 class="head">96</h3>
+                <h4 class="sub-head grey">Krimit Milan</h4>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i>
+            </div>
+            <div>
+                <img class="page-image" src="images/reading3.png" alt="image5">
+                <h3 class="head">Work for Money</h3>
+                <h4 class="sub-head grey">R Kelly</h4>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star empty"></i>
+            </div>
+            <div>
+                <img class="page-image" src="images/reading4.png" alt="image6">
+                <h3 class="head">Brand Stretegy</h3>
+                <h4 class="sub-head grey">Dean Werner</h4>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star-half-stroke half"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
