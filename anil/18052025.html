@@ -6,31 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
     <style>
-
+        body{
+            background-color: aqua;
+        }
         .slider-container {
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
             overflow: hidden;
-            position: relative; 
+            position: relative;
             /* margin: auto; */
-            margin: 10px 500px 10px 500px ;  
+            margin: 10px 600px 10px 450px;
             border: 5px solid purple;
         }
 
         .slider {
-            display: flex;  /* all image are one line */
-            width: calc(500px * 4);  /* 4 image than 400px */
+            display: flex;
+            /* all image are one line */
+            width: calc(600px * 4);
+            /* 4 image than 400px */
             height: 100%;
             transition: transform 0.5s linear;
         }
 
         .slide {
-            flex: 1 0 500px;  
+            flex: 1 0 600px;
             /* flex-grow: 1;
             flex-shrink: 0;
             flex-basis: 500px; */
-            max-width: 500px;
-            height: 500px;
+            max-width: 600px;
+            height: 600px;
         }
 
         .slide img {
@@ -43,14 +47,28 @@
         .slider-buttons {
             text-align: center;
             margin-top: 10px;
+            position: absolute;
+            z-index: 5;
+            top: 45%;
         }
 
         button {
+            background: transparent;
             padding: 10px 20px;
             font-size: 16px;
             margin: 0 10px;
-            /* when cursor is hover in the button than its change the icon */ 
-            cursor: pointer; 
+            /* when cursor is hover in the button than its change the icon */
+            cursor: pointer;
+        }
+
+        .slider:hover{
+            display: contents;
+        }
+
+        .next {
+            position: absolute;
+            top: 45%;
+            margin-left: 80%;
         }
 
         img {
@@ -58,23 +76,30 @@
             width: 100%;
             object-fit: cover;
         }
+@media (max-width:767px) {
+            .slider-container {
+               margin: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div class="slider-container">
+        <div class="prev a">
+            <button class="slider-buttons" onclick="prev()">Prev</button>
+        </div>
         <div class="slider" id="slider">
+
             <div class="slide"><img src="images/square.jpg" alt="image 1"></div>
             <div class="slide"><img src="images/mobile.jpeg" alt="image 2"></div>
             <div class="slide"><img src="images/square.jpg" alt="image 3"></div>
             <div class="slide"><img src="images/square.jpg" alt="image 4"></div>
         </div>
-    </div>
-
-    <div class="slider-buttons">
-        <button onclick="prev()">Prev</button>
-        <button onclick="next()">Next</button>
+        <div class="next a">
+            <button class="slider-buttons" onclick="next()">Next</button>
+        </div>
     </div>
 
     <script>
@@ -93,7 +118,7 @@
         }
 
         function updateSlider() {
-            slider.style.transform = `translateX(-${index * 500}px)`;
+            slider.style.transform = `translateX(-${index * 600}px)`;
         }
     </script>
 
