@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated 3D Circles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: absolute;
+            top: 5%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+            animation: baraiya 20s linear infinite;
+            /* Optional full rotation */
+        }
+        
+        .core {
+            position: absolute;
+            width: 2vmin;
+            /* means aapel width na 2% px */
+            aspect-ratio: 1;
+            /* means height and width same make square */
+            background-color: lime;
+            border-radius: 50%;
+            box-shadow: 0 0 30px lime;
+            z-index: 2;
+            animation: kalpesh 2s linear infinite;
+        }
+
+        
+        @keyframes kalpesh {
+
+            from {
+                transform: translateX(1000px);
+            }
+
+            to{
+                transform: rotateX(1000px);
+            }
+
+        }
+
+        @keyframes baraiya {
+            from {
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="core"></div> <!-- Optional glowing center -->
+    </div>
+</body>
+
+</html>
