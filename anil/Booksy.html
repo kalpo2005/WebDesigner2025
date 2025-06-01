@@ -42,6 +42,20 @@
         justify-content: space-between;
     }
 
+    .search input {
+        margin: -4px;
+        font-size: large;
+        border: none;
+        background-color: transparent;
+        width: 2000px;
+    }
+
+    .search button {
+        margin-left: -25PX;
+        border: none;
+        background-color: transparent;
+    }
+
     .icon {
         display: flex;
         width: 100px;
@@ -123,7 +137,7 @@
         color: rgb(196, 161, 115);
     }
 
-    button {
+    .main_button {
         background-color: rgb(157, 122, 76);
         color: white;
         border: none;
@@ -131,7 +145,7 @@
         border-radius: 4px;
     }
 
-    .highlight{
+    .highlight {
         display: flex;
         justify-content: space-between;
         padding-top: 10px;
@@ -153,23 +167,28 @@
         height: 200px;
     }
 
-    .full{
+    .full {
         color: gold;
     }
-    .half{
+
+    .half {
         color: gold;
     }
-    .empty{
+
+    .empty {
         color: gold;
     }
-    .grey{
+
+    .grey {
         color: gray;
     }
-    .head{
+
+    .head {
         margin-top: 5px;
         margin-bottom: 0px;
     }
-    .sub-head{
+
+    .sub-head {
         margin: 5px;
     }
 </style>
@@ -178,10 +197,12 @@
     <div class="container">
 
         <nav class="nav-menu">
-            <div class="name"><h2>Booksy</h2></div>
+            <div class="name">
+                <h2>Booksy</h2>
+            </div>
             <div class="search">
-                <div>Search by auther ,title, name</div>
-                <div class="like"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <input type="text" placeholder="Search by auther ,title, name" id="button">
+                <button onclick="message()"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="icon">
                 <div class="like"><i class="fa-regular fa-heart"></i></div>
@@ -213,7 +234,7 @@
             <div class="main-text">
                 <h1 class="title">Build your Library</h1>
                 <h4 class="subtitle">But two selected books and get <br> one for free</h4>
-                <button>View all</button>
+                <button class="main_button">View all</button>
 
             </div>
             <div>
@@ -223,10 +244,10 @@
 
         <div class="highlight">
             <div>
-              <h3> <b> Popular Now</b></h3>
+                <h3> <b> Popular Now</b></h3>
             </div>
             <div>
-              <a href="#">View all</a> 
+                <a href="#">View all</a>
             </div>
 
         </div>
@@ -236,46 +257,66 @@
                 <img class="page-image" src="images/reading1.png" alt="image1">
                 <h3 class="head">Creative Hustle</h3>
                 <h4 class="sub-head grey">Ramen Albert</h4>
-                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
-                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i>
             </div>
             <div>
                 <img class="page-image" src="images/reading5.png" alt="image2">
                 <h3 class="head">Art Unleashed</h3>
                 <h4 class="sub-head grey">Stefano</h4>
-                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
-                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star-half-stroke half"></i>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-regular fa-star-half-stroke half"></i>
             </div>
             <div>
                 <img class="page-image" src="images/reading2.png" alt="image3">
                 <h3 class="head">The Study Of Brain</h3>
                 <h4 class="sub-head grey">Alan W Watts</h4>
-                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
-                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star empty"></i>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-regular fa-star empty"></i>
             </div>
             <div>
                 <img class="page-image" src="images/reading6.png" alt="image4">
                 <h3 class="head">96</h3>
                 <h4 class="sub-head grey">Krimit Milan</h4>
-                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
-                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i>
             </div>
             <div>
                 <img class="page-image" src="images/reading3.png" alt="image5">
                 <h3 class="head">Work for Money</h3>
                 <h4 class="sub-head grey">R Kelly</h4>
-                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
-                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star empty"></i>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-regular fa-star empty"></i>
             </div>
             <div>
                 <img class="page-image" src="images/reading4.png" alt="image6">
                 <h3 class="head">Brand Stretegy</h3>
                 <h4 class="sub-head grey">Dean Werner</h4>
-                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
-                    class="fa-solid fa-star full"></i><i class="fa-regular fa-star-half-stroke half"></i>
+                <i class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-solid fa-star full"></i><i class="fa-solid fa-star full"></i><i
+                    class="fa-regular fa-star-half-stroke half"></i>
             </div>
         </div>
     </div>
+
+
+    <script>
+        function message() {
+            // let a = document.getElementById("button").value;
+            // alert(a);
+
+            // confirm("do you intrested ?");
+
+            // let button = document.getElementById("button");
+            const name = prompt("enter your name : ");
+            // button.textContent = `Player ${name}'s turn`;
+        }
+    </script>
 </body>
 
 </html>
