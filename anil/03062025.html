@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Variable Pendulums</title>
+  <style>
+    :root {
+      --rod-height: 180px;
+      --ball-size: 20px;
+    }
+
+    body {
+      margin: 0;
+      background: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pendulum-wrapper {
+      position: relative;
+      width: 0;
+      height: 0;
+    }
+
+    .pendulum {
+      position: absolute;
+      transform-origin: top right;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+
+      /* Declaration of variable --duration and --delay*/
+      animation: rotate var(--duration, 3s) alternate infinite ease-in-out;
+      animation-delay: var(--delay, 1s);
+    }
+
+    .rod {
+      width: 2px;
+      height: var(--rod-height);
+      background: black;
+      margin: 0 auto;
+    }
+
+    .ball {
+      width: var(--ball-size);
+      height: var(--ball-size);
+      border-radius: 50%;
+      position: relative;
+      top: var(--rod-height);
+      left: calc(var(--ball-size) / -2 + 1px);
+
+      /* -hsl() function is used to define the color  */
+      background: hsl(var(--hue), 100%, 50%);
+      color: hsl(var(--hue), 100%, 60%);
+      box-shadow:
+        0 0 5px currentColor,
+        0 0 15px currentColor,
+        0 0 25px currentColor;
+    }
+
+    @keyframes rotate {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(180deg); }
+    }
+
+    /* Custom variables for each pendulum */
+    .pendulum:nth-child(1)  { --hue: 0;   --duration: 3s;   --delay: 0s; }
+    .pendulum:nth-child(2)  { --hue: 36;  --duration: 3.1s; --delay: 0.05s; }
+    .pendulum:nth-child(3)  { --hue: 72;  --duration: 3.2s; --delay: 0.1s; }
+    .pendulum:nth-child(4)  { --hue: 108; --duration: 3.3s; --delay: 0.15s; }
+    .pendulum:nth-child(5)  { --hue: 144; --duration: 3.4s; --delay: 0.2s; }
+    .pendulum:nth-child(6)  { --hue: 180; --duration: 3.5s; --delay: 0.25s; }
+    .pendulum:nth-child(7)  { --hue: 216; --duration: 3.6s; --delay: 0.3s; }
+    .pendulum:nth-child(8)  { --hue: 252; --duration: 3.7s; --delay: 0.35s; }
+    .pendulum:nth-child(9)  { --hue: 288; --duration: 3.8s; --delay: 0.4s; }
+    .pendulum:nth-child(10) { --hue: 324; --duration: 3.9s; --delay: 0.45s; }
+  </style>
+</head>
+<body>
+  <div class="pendulum-wrapper">
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+    <div class="pendulum"><div class="rod"></div><div class="ball"></div></div>
+  </div>
+</body>
+</html>
