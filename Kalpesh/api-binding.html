@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0em 4em;
+        }
+
+        .container {
+            display: flex;
+            gap: 1em;
+            /* width: 100%; */
+            overflow: scroll;
+        }
+
+        .card {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            background-color: aqua;
+            border-radius: 5px;
+        }
+
+        .card-img {
+            padding: 1em;
+        }
+
+        .card-img img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+    </div>
+
+    <script>
+        function getapiData() {
+
+            let kal = new XMLHttpRequest();
+            kal.open('GET', 'http://gkmaza.com/apps/gujju_ebook/read_book.php');
+            kal.onreadystatechange = function () {
+                if (kal.readyState === 4 && kal.status === 200) {
+
+                    try {
+                        const data = JSON.parse(kal.responseText);
+                        console.log(data.records[0].name);
+                        updateCard(data.records);
+                    }
+                    catch (e) {
+                        console.log("process failed");
+                    }
+                }
+                else {
+                    console.log(kal.readyState);
+                }
+            }
+
+            kal.send();
+        }
+        const container = document.querySelector('.container');
+
+        function updateCard(bav) {
+            bav.forEach(element => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                card.innerHTML = ` <div class="card-img">
+                <img src="http://gkmaza.com/apps/gujju_ebook/image/${element.bookimg}" alt="">
+            </div>
+            <div class="card-info">
+                <h2>${element.name}</h2>
+                <h4>${element.authorName}</h4>
+                <h4>${element.booktype}</h4>
+                <p>${element.description}</p>
+
+            </div>`;
+
+                container.appendChild(card);
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
