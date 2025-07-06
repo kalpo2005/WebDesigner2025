@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBase</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+        }
+
+        .container {
+            margin: 20px 10px;
+            display: grid;
+            grid-template-columns: 1fr 60% 1fr;
+            grid-template-rows: 10% 310px 330px;
+            overflow: hidden;
+
+            /*   method 1  */
+            /* grid-template-areas:
+                "menu search search"
+                "menu recommended section"
+                "menu categories section"; */
+
+        }
+
+
+
+        .menu {
+            /*   method 2  */
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column: 1;
+            margin-top: -50px;
+            /* border: 2px solid black; */
+
+            /*  method 1  */
+            /* grid-area: menu; */
+
+            padding-right: 20px;
+            background-color: white;
+        }
+
+        .menu-li {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .icon i {
+            display: flex;
+            height: 25px;
+            width: 25px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(239, 239, 239);
+            padding: 2px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .home {
+            color: rgb(85, 85, 239);
+            font-size: x-large;
+            margin-left: 10px;
+            padding: 2px;
+        }
+
+        .menu-li:hover .icon i {
+            background-color: rgb(85, 85, 239);
+        }
+
+        .menu-li:hover .icon-dis {
+            font-weight: bold;
+        }
+
+        .search {
+            /*  method 2  */
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+            /*  method 1  */
+            /* grid-area: search; */
+
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-box {
+            background-color: rgb(173, 174, 175);
+            width: 400px;
+            /* padding: 0px 20px; */
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search input {
+            border: none;
+            background-color: transparent;
+            width: 100%;
+            height: 25px;
+        }
+
+        .search-box i{
+            position: relative;
+            margin-left: 5px
+        }
+
+
+        .search-menu {
+            /* background-color: aqua; */
+            border-radius: 50%;
+            gap: 20px;
+        }
+
+
+        .recommended {
+            /*   method 2  */
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column: 2;
+
+            /*  method 1  */
+            /* grid-area: recommended; */
+
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 2px 20px;
+        }
+
+        .recommended-image {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image {
+            height: 200px;
+            width: 175px;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+            display: block;
+            align-items: center;
+            justify-content: center;
+            color: rgb(185, 183, 183);
+
+        }
+
+        .image img {
+            height: 200px;
+            width: 175px;
+            border-radius: 5px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .recommended-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
+        .seeAll {
+            height: 20px;
+            width: 80px;
+            color: blue;
+            background-color: rgb(189, 197, 247);
+            border: none;
+            border-radius: 5px;
+            padding: 3px;
+        }
+
+
+        .head {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: black;
+        }
+
+        .categories {
+            /*   method 2  */
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column: 2;
+
+            /*  method 1  */
+            /* grid-area: categories; */
+
+            background-color: white;
+            margin: 0px 10px;
+            border-radius: 10px;
+            padding: 2px 20px;
+
+        }
+
+        .list-button {
+            height: 20px;
+            color: blue;
+            background-color: rgb(189, 197, 247);
+            border: none;
+            border-radius: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            font-weight: bolder;
+            height: 20px;
+            background-color: rgb(189, 197, 247);
+            border: none;
+            border-radius: 5px;
+        }
+
+        .buttons button:hover {
+            background-color: blue;
+        }
+
+        .categories-image {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            height: 250px;
+        }
+
+        .categories-image .image:hover {
+                transition: transform 1s ease;
+                transform: translateY(-35px) scale(1.1);
+                
+                /* Slight vertical zoom */
+            }
+
+        .section {
+            /*  method 2  */
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column: 3;
+
+            /*  method 1  */
+            /* grid-area: section; */
+
+            background-color: rgb(32, 6, 62);
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="menu-li">
+                    <div><i class="fa-solid fa-house-chimney-user home"></i></div>
+                    <div class="flex" style="font-size: xx-large;">
+                        <h4><b>BOOK</b></h4>&nbsp;Base
+                    </div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-solid fa-house"></i></div>
+                    <div class="icon-dis">Discover</div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="icon-dis">Category</div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="icon-dis">My Library</div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                    <div class="icon-dis">Download</div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-solid fa-podcast"></i></div>
+                    <div class="icon-dis">Audio Books</div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-regular fa-heart"></i></div>
+                    <div class="icon-dis">Favorite</div>
+                </li>
+                <hr>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="icon-dis">Setting</div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-regular fa-comments"></i></div>
+                    <div class="icon-dis">Support</div>
+                </li>
+                <li class="menu-li">
+                    <div class="icon"><i class="fa-solid fa-right-to-bracket"></i></div>
+                    <div class="icon-dis">Lougout</div>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="           Searh your favourite books">
+            </div>
+            <div class="flex search-menu">
+                <i class="fa-regular fa-bell"></i>
+                <img src="images/mobile.jpeg" alt="image" style="height: 25px; width: 25px;">
+                Balogun
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+
+        <div class="recommended">
+            <div class="recommended-head">
+                <h3>Recommeded</h3> <button class="seeAll">see All &nbsp;<i class="fa-solid fa-angle-right"
+                        style="font-size: smaller; align-items: center;"></i></button>
+            </div>
+            <div class="recommended-image">
+                <div class="image">
+                    <img src="images/BookBase/the psychology of money.jpg" alt="imge1">
+                    <h3 class="head">The Psychology of...</h3>
+                    Morgon Housel
+                </div>
+                <div class="image">
+                    <img src="images/BookBase/how innovation work.jpg" alt="image2">
+                    <h3 class="head">How Innovation...</h3>
+                    Matt Ridley
+                </div>
+                <div class="image">
+                    <img src="images/BookBase/company of one.jpg" alt="image3">
+                    <h3 class="head">Comapnay of One</h3>
+                    Paul jarvis
+                </div>
+                <div class="image">
+                    <img src="images/BookBase/stupore e tremori.jpg" alt="">
+                    <h3 class="head">stupore E Tremori</h3>
+                    Amelie Nothomb
+                </div>
+            </div>
+        </div>
+        <div class="categories">
+            <div>
+                <div class="recommended-head">
+                    <h3>Categories</h3> <button class="list-button"><i class="fa-regular fa-rectangle-list"></i>
+                    </button>
+                </div>
+                <div class="buttons">
+                    <button>All</button>
+                    <button>Sci-Fi</button>
+                    <button>Fantasy</button>
+                    <button>Drems</button>
+                    <button>Entertainment</button>
+                    <button>Business</button>
+                    <button>Education</button>
+                    <button>Geography</button>
+                </div>
+                <div class="categories-image">
+                    <div class="image">
+                        <img src="images/BookBase/the bees.jpg" alt="imge1">
+                        <h3 class="head">The Psychology of...</h3>
+                        Morgon Housel
+                    </div>
+                    <div class="image">
+                        <img src="images/BookBase/the fact of body.jpg" alt="image2">
+                        <h3 class="head">How Innovation...</h3>
+                        Matt Ridley
+                    </div>
+                    <div class="image">
+                        <img src="images/BookBase/The room.jpg" alt="image3">
+                        <h3 class="head">Comapnay of One</h3>
+                        Paul jarvis
+                    </div>
+                    <div class="image">
+                        <img src="images/BookBase/through the brecking.jfif" alt="">
+                        <h3 class="head">stupore E Tremori</h3>
+                        Amelie Nothomb
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="preview"></div>
+        </div>
+    </div>
+    <script>
+        const preview = document.getElementById("preview");
+        document.querySelectorAll(".image img").forEach((img) => {
+            img.addEventListener("click", () => {
+                preview.innerHTML = "";
+                const newImg = document.createElement("img");
+                newImg.src = img.src;
+                newImg.alt = img.alt;
+                preview.appendChild(newImg);
+            });
+        });
+    </script>
+</body>
+
+</html>

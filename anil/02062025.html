@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form with Captcha Validation</title>
+  <style>
+    body {
+      margin: 0;
+      background: aqua;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      background-color: grey;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .myTable {
+      border-collapse: collapse;
+      height: 800px;
+      width: 600px;
+    }
+
+    .row {
+      border: 2px solid black;
+    }
+
+    .head, .box {
+      padding: 10px;
+    }
+
+    input {
+      width: 200px;
+      padding: 1px;
+    }
+
+    button {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .captcha-box {
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 3px;
+      background-color: white;
+      padding: 5px 10px;
+      display: inline-block;
+      border: 1px solid black;
+      user-select: none;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    <table class="myTable">
+      <tr class="row">
+        <th class="head">Name</th>
+        <td class="box"><input type="text" placeholder="Enter name" required /></td>
+      </tr>
+      <tr class="row">
+        <th class="head">Address</th>
+        <td class="box"><textarea name="address" placeholder="Enter Address"></textarea></td>
+      </tr>
+      <tr class="row">
+        <th class="head">Gender</th>
+        <td class="box">
+          <input type="radio" name="Gender" value="Male" checked />Male
+          <input type="radio" name="Gender" value="Female" />Female
+          <input type="radio" name="Gender" value="Other" />Other
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="head">city</th>
+        <td class="box"><input type="checkbox" placeholder="Enter gender" /></td>
+      </tr>
+      <tr class="row">
+        <th class="head">Hobby</th>
+        <td class="box"><input type="text" placeholder="Enter hobby" /></td>
+      </tr>
+      <tr class="row">
+        <th class="head">Mobile Number</th>
+        <td class="box"><input type="text" placeholder="Enter mobile number" /></td>
+      </tr>
+      <tr class="row">
+        <th class="head">E-mail Id</th>
+        <td class="box"><input type="email" placeholder="Enter email" /></td>
+      </tr>
+      <tr class="row">
+        <th class="head">Password</th>
+        <td class="box"><input type="password" placeholder="Enter password" /></td>
+      </tr>
+      <tr class="row">
+        <th class="head">Captcha</th>
+        <td class="box">
+          <div id="captcha" class="captcha-box" title="Click to refresh"></div>
+          <input type="text" id="captchaInput" placeholder="Enter captcha" required />
+        </td>
+      </tr>
+      <tr class="row">
+        <td class="head"><button type="reset">Reset</button></td>
+        <td class="head"><button type="submit">Submit</button></td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    let currentCaptcha = '';
+
+    // Generate random captcha
+    function generateCaptcha(length = 5) {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let captcha = '';
+      for (let i = 0; i < length; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return captcha;
+    }
+
+    // Display new captcha
+    function setCaptcha() {
+      currentCaptcha = generateCaptcha();
+      document.getElementById('captcha').textContent = currentCaptcha;
+    }
+
+    // Set captcha on load
+    window.onload = setCaptcha;
+
+    // Refresh captcha on click
+    document.getElementById('captcha').addEventListener('click', setCaptcha);
+
+    // Validate captcha before form submission
+    document.getElementById('myForm').addEventListener('submit', function (e) {
+      const userInput = document.getElementById('captchaInput').value.trim().toUpperCase();
+      if (userInput !== currentCaptcha) {
+        e.preventDefault(); // stop form from submitting
+        alert('Captcha does not match. Please try again.');
+        setCaptcha(); // Optionally refresh captcha on error
+      }
+    });
+
+    // Refresh captcha on form reset
+    document.getElementById('myForm').addEventListener('reset', function () {
+      setTimeout(setCaptcha, 100); // slight delay to allow reset first
+    });
+  </script>
+</body>
+</html>
